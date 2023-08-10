@@ -29,6 +29,10 @@ main.homepage {
 
     &-title {
         max-width: min(885px, 100%);
+
+        .gold {
+            color: var(--color-gold);
+        }
     }
 
     &-subtitle {

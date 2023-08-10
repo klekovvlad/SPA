@@ -1,6 +1,10 @@
 .gifts {
     padding: 50px 0px;
 
+    @include mobile {
+        padding: 40px 0px;
+    }
+
     h2 {
         margin: 0px 0px 35px;
     }

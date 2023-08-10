@@ -1,0 +1,104 @@
+.about {
+    padding: 50px 0px;
+
+    @include mobile {
+        padding: 40px 0px;
+    }
+
+    &-wrapper {
+        padding: 40px 0px 0px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+
+        @include mobile {
+            padding: 18px 0px 0px;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-numbers {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px 50px;
+
+        @include mobile {
+            justify-content: space-between;
+            gap: 26px 45px;
+        }
+    }
+
+    &-item {
+        flex: 0 0 150px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 18px;
+
+        @include mobile {
+            flex: 0 0 calc(50% - (45px / 2));
+
+            &:nth-child(3) {
+                flex: 0 0 100%;
+
+                .about-number {
+                    width: 150px;
+                    margin: 0px auto;
+                }
+            }
+        }
+
+        &:not(:nth-child(1), :nth-child(2), :nth-child(3)) {
+            .about-number {
+                color: var(--color-gold);
+                border: 1px solid var(--color-text);
+            }
+        }
+    }
+
+    &-number {
+        @include fontTitle(400, normal);
+        font-size: 90px;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        border: 1px solid var(--color-border);
+    }
+
+    &-desc {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    &-text {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 25px;
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            opacity: 0.7;
+
+            @include mobile {
+                font-size: 16px;
+            }
+        }
+
+        .button-border__dark {
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+}

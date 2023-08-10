@@ -1,0 +1,23 @@
+.photos {
+    padding: 140px 30px 50px;
+
+    @include mobile {
+        padding: 50px 0px 40px;
+    }
+
+    h2 {
+        font-size: 120px;
+
+        @include tablet {
+            font-size: 96px;
+        }
+
+        @include mobile {
+            font-size: 64px;
+        }
+    }
+
+    &-top {
+        padding: 28px 0px 30px;
+    }
+}

@@ -69,6 +69,52 @@ if(GiftsSlider) {
     })
 }
 
+//Слайдер галереи
+
+const PhotosSliders = document.querySelectorAll('.photos-slider');
+
+if(PhotosSliders.length > 0) {
+    PhotosSliders.forEach((photosSlider, index) => {
+        if(index === 0) {
+            const photosSwiper = new Swiper(photosSlider, {
+                spaceBetween: 30,
+                slidesPerView: 3,
+                loop: true,
+                breakpoints: {
+                    0: {
+                        spaceBetween: 15,
+                        slidesPerView: 1.2,
+                        centeredSlides: true,
+                    },
+                    768: {
+                        spaceBetween: 30,
+                        slidesPerView: 3,
+                        centeredSlides: false,
+                    }
+                }
+            })
+        }else {
+            const photosSwiper = new Swiper(photosSlider, {
+                spaceBetween: 30,
+                slidesPerView: 5,
+                loop: true,
+                breakpoints: {
+                    0: {
+                        spaceBetween: 15,
+                        slidesPerView: 1.9,
+                        centeredSlides: true,
+                    },
+                    768: {
+                        spaceBetween: 30,
+                        slidesPerView: 5,
+                        centeredSlides: false,
+                    }
+                }
+            })
+        }
+    })
+}
+
 
 //Список категорий для услуг в адаптиве
 

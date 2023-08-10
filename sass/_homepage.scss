@@ -33,6 +33,10 @@
             opacity: 0;
             transition: opacity .5s linear;
 
+            h2 {
+                text-align: left;
+            }
+
             @include tablet {
                 padding: 44px 50px 35px;
             }

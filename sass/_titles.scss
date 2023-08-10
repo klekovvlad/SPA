@@ -6,7 +6,7 @@ h1 {
     @include mobile {
         font-size: 40px;
         line-height: 1.35;
-        word-break: break-all;
+        word-break: break-word;
     }
 }
 
@@ -37,7 +37,7 @@ h1, h2, h3, h4 {
         font-style: italic;
     }
     span.gold {
-        color: var(--color-gold);
+        color: var(--color-border);
     }
     span.bold {
         font-weight: 700;

@@ -112,5 +112,9 @@
 .homepage {
     .places {
         padding: 50px 0px;
+
+        @include mobile {
+            padding: 40px 0px;
+        }
     }
 }
