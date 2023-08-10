@@ -1,4 +1,4 @@
-.button, .button-border {
+.button, .button-border, .button-card {
     display: block;
     width: max-content;
     padding: 22px 41px;
@@ -18,6 +18,7 @@
 }
 
 .button-border {
+    background: transparent;
     border-image: var(--gradient-button);
     border-width: 2px;
     border-style: solid;
@@ -37,6 +38,32 @@
         color: #fff;
         background: linear-gradient(180deg, #836C4A 0%, #B79A72 100%);;
     }
+}
+
+.button-card {
+    color: #fff;
+    font-size: 16px;
+    @include fontTitle(600, normal);
+    border-image: var(--gradient-button);
+    border-width: 2px;
+    border-style: solid;
+    border-image-slice: 1;
+    background: rgba(38, 39, 43, 0.60);
+    transition: opacity .3s linear, transform .5s linear;
+
+    @include mobile {
+        font-size: 14px;
+        padding: 17px 20px;
+    }
+}
+
+.button-dark {
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: var(--radius-button);
+    background: var(--color-text);
+    padding: 10px 16px;
 }
 
 .cart {

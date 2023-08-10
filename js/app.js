@@ -36,3 +36,21 @@ if(SurtificateSlider) {
         },
     })
 }
+
+
+//Список категорий для услуг в адаптиве
+
+const servicesList = document.querySelector('.services-list');
+
+if(servicesList) {
+    const servicesListItems = servicesList.querySelectorAll('.services-list-item');
+    servicesList.addEventListener('click', (e) => {
+        servicesList.classList.contains('open') ? servicesList.classList.remove('open') : servicesList.classList.add('open')
+        if(e.target.classList.contains('services-button')) {
+            for(let i = 0; i < servicesListItems.length; i++) {
+                servicesListItems[i].classList.remove('active')
+            }
+            e.target.parentElement.classList.add('active')
+        }
+    })
+}

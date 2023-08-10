@@ -39,7 +39,7 @@
 
         &-guest,
         &-title,
-        .button-border {
+        .button-card {
             z-index: 3;
         }
 
@@ -51,28 +51,17 @@
             text-transform: uppercase;
         }
 
-        &-title {
-            position: relative;
-        }
-
-        .button-border {
-            color: #fff;
-            font-size: 16px;
+        .button-card {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            @include fontTitle(600, normal);
-            background: rgba(38, 39, 43, 0.60);
             opacity: 0;
             visibility: hidden;
             transform: translate(-50%, calc(-50% + 50px));
-            transition: opacity .3s linear, transform .5s linear;
+        }
 
-            @include mobile {
-                font-size: 14px;
-                padding: 17px 20px;
-            }
+        &-title {
+            position: relative;
         }
 
         &::before {
@@ -105,7 +94,7 @@
         }
 
         &:hover {
-            .button-border {
+            .button-card {
                 opacity: 1;
                 visibility: visible;
                 transform: translate(-50%, -50%);
