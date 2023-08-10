@@ -17,3 +17,22 @@ if(window.innerWidth < 768) {
 
     }
 }
+
+// window.onclick = (e) => console.log(e.target)
+
+
+//Слайдер сертификатов на главной странице
+
+const SurtificateSlider = document.querySelector('.surtificate-slider');
+
+if(SurtificateSlider) {
+    const SurtificateSwiper = new Swiper(SurtificateSlider, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        speed: 1000,
+        pagination: {
+            el: '.surtificate-pagination',
+            clickable: true,
+        },
+    })
+}

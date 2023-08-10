@@ -1,0 +1,95 @@
+.homepage {
+    .surtificate {
+        padding: 50px 0px;
+
+        &-slider {
+            position: relative;
+            overflow: visible;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                right: -10px;
+                bottom: -10px;
+                border: 1px solid var(--color-border);
+                z-index: -1;
+            }
+        }
+
+        &-slide {
+            color: #fff;
+            padding: 44px 114px 35px;
+            background: var(--color-text) url('../img/gift-bg.png') no-repeat center;
+            background-size: cover;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 0px;
+            opacity: 0;
+            transition: opacity .5s linear;
+
+            @include tablet {
+                padding: 44px 50px 35px;
+            }
+
+            @include mobile {
+                padding: 44px 30px 72px;
+                grid-template-columns: 1fr;
+                grid-gap: 28px;
+
+                &-title {
+                    font-size: 36px;
+                }
+            }
+
+
+
+            &-img {
+                margin: 0px auto;
+            }
+
+            &-subtitle {
+                margin: 0px 0px 6px auto;
+                font-weight: 500;
+                text-align: right;
+
+                @include mobile {
+                    text-align: left;
+                    margin: 9px 0px 21px;
+                }
+            }
+
+            &.swiper-slide-active {
+                opacity: 1;
+            }
+        }
+
+        &-pagination {
+            position: absolute;
+            bottom: 28px;
+            z-index: 2;
+            left: 50%;
+            transform: translate(-50%, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 22px;
+
+            .swiper-pagination-bullet {
+                width: 13px;
+                height: 13px;
+                background: #fff;
+                opacity: 0.5;
+                border-radius: 50%;
+                margin: 0;
+
+                &-active {
+                    opacity: 1;
+                }
+            }
+        }
+
+
+    }
+}
