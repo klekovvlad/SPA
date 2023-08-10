@@ -1,0 +1,23 @@
+body,
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-size: 16px;
+    @include font(400);
+}
+
+.container {
+    max-width: 1340px;
+    padding: 0px 20px;
+    margin: 0px auto;
+
+    @include tablet {
+        max-width: 100%;
+    }
+
+    @include mobile {
+        padding: 0px 30px;
+    }
+}

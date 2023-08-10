@@ -1,0 +1,22 @@
+@mixin font($weight) {
+    font-family: Inter, sans-serif;
+    font-weight: $weight;
+}
+
+@mixin fontTitle($weight, $style) {
+    font-family: CormorantInfant, serif;
+    font-weight: $weight;
+    font-style: $style;
+}
+
+@mixin tablet {
+    @media(max-width: 1249px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}

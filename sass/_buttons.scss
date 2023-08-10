@@ -1,0 +1,30 @@
+.button, .button-border {
+    display: block;
+    width: max-content;
+    padding: 22px 41px;
+    border-radius: var(--radius-button);
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+}
+
+.button {
+    color: #fff;
+    background: var(--gradient-button);
+}
+
+.button-border {
+    border-image: var(--gradient-button);
+    border-width: 2px;
+    border-style: solid;
+    border-image-slice: 1;
+}
+
+.cart {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--color-border) url('../img/icons/shopping-cart.svg') no-repeat center;
+    background-size: 20px 20px;
+}

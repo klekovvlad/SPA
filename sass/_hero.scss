@@ -1,0 +1,86 @@
+main.homepage {
+    .hero {
+        background-image: url('../img/homepage-header-bg.png');
+
+        @include mobile {
+            &-buttons {
+                flex-direction: column;
+                .button,
+                .button-border {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    color: #fff;
+    padding-top: calc(172px + 44px);
+    padding-bottom: 115px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include mobile {
+        padding: calc(52px + 62px) 0px 60px;
+    }
+
+    &-title {
+        max-width: min(885px, 100%);
+    }
+
+    &-subtitle {
+        opacity: 0.8;
+        max-width: min(516px, 100%);
+        line-height: 1.875;
+
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 170px;
+
+        @include mobile {
+            height: 260px;
+        }
+    }
+
+    &::before {
+        top: 0;
+        background: linear-gradient(180deg, rgba(38, 39, 43, 0.00) 0%, rgba(0, 0, 0, 0.01) 99.99%, rgba(38, 39, 43, 0.00) 100%, #26272B 100%);
+        opacity: 0.7;
+    }
+
+    &::after {
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(38, 39, 43, 0.00) 0%, #26272B 100%);
+    }
+
+    &-subtitle {
+        margin: 20px 0px 42px;
+
+        @include mobile {
+            margin: 14px 0px 44px;
+        }
+    }
+    
+    &-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 20px;
+    }
+}
