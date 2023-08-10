@@ -21,7 +21,7 @@ if(window.innerWidth < 768) {
 // window.onclick = (e) => console.log(e.target)
 
 
-//Слайдер сертификатов на главной странице
+//Слайдер баннеров на главной странице
 
 const SurtificateSlider = document.querySelector('.surtificate-slider');
 
@@ -34,6 +34,38 @@ if(SurtificateSlider) {
             el: '.surtificate-pagination',
             clickable: true,
         },
+    })
+}
+
+//Слайдер сертификатов
+
+const GiftsSlider = document.querySelector('.gifts-slider');
+
+if(GiftsSlider) {
+    const GiftsSwiper = new Swiper(GiftsSlider, {
+        slidesPerView: 'auto',
+        centeredSlides: true, 
+        initialSlide: 1,
+        breakpoints: {
+            0: {
+                spaceBetween: 20,
+                initialSlide: 0,
+            },
+            768: {
+                spaceBetween: 80,
+                initialSlide: 1,
+            }
+        },
+        on: {
+            init: function() {
+                if(window.innerWidth >= 768) {
+                    if(this.slides.length <= 3) {
+                        this.disable()
+                    }
+                }
+            }
+        },
+
     })
 }
 
