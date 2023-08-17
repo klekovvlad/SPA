@@ -1,0 +1,23 @@
+.breadcrumbs {
+    font-size: 12px;
+
+    &-link {
+        opacity: 0.5;
+        display: inline-block;
+        
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 10px;
+            background: url('../img/icons/breadcrumbs-arrow.svg') no-repeat center;
+            background-size: contain;
+            margin-left: 18px;
+        }
+    }
+
+    &-curent {
+        display: inline-block;
+        margin-left: 18px;
+    }
+}

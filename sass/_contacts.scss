@@ -26,6 +26,16 @@
         justify-content: center;
         gap: 18px;
 
+        @include starTop();
+
+        &::after {
+            transform: translate(-50%, calc(-50% - 20px));
+
+            @include mobile {
+                transform: translate(-50%, calc(-50% - 10px));
+            }
+        }
+
         @include mobile {
             padding: 54px 24px;
             width: min(800px, calc(100% - 40px));
@@ -74,5 +84,10 @@
 
             margin: 20px 0px 4px;
         }
+    }
+
+    &-text {
+        text-transform: uppercase;
+        text-align: center;
     }
 }

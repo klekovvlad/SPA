@@ -57,6 +57,16 @@
 
         h2 {
             text-align: left;
+
+            &.has-star {
+                &::before, &::after {
+                    background: #fff;
+                }
+            }
+
+            @include mobile {
+                max-width: 90%;
+            }
         }
 
         p.form-banner-desc {
@@ -74,27 +84,109 @@
 }
 
 .form {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 100px;
+
+    &-text {
+        font-size: 14px;
+    }
+
+    @include tablet {
+        gap: 40px;
+    }
+
+    @include mobile {
+        flex-direction: column;
+
+    }
+
     &-row {
         display: flex;
         align-items: end;
-        justify-content: start;
+        justify-content: stretch;
         gap: 30px;
         flex-wrap: wrap;
-        
+        flex: 0 0 100%;
+        width: 100%;
+    }
 
-        &:not(:last-child) {
-            margin-bottom: 30px;
+    &-col {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 20px;
+    }
 
-            @include mobile {
-                margin-bottom: 20px;
-            }
-        }
+    .form-col > .input-item {
+        width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .form-row > .input-item {
+        flex-grow: 1;
     }
 
     @include mobile {
         gap: 20px;
         .button {
-            flex: 0 0 100%
+            flex: 0 0 100%;
+            width: 100%;
+        }
+    }
+}
+
+.form-prepayment {
+    padding: 60px 0px;
+
+    &-wrapper {
+        padding: 62px 114px 80px;
+        border: 1px solid var(--color-border);
+        position: relative;
+
+        @include tablet {
+            padding: 60px 40px;
+        }
+
+        @include mobile {
+            padding: 40px 34px;
+        }
+
+        @include starTop();
+
+        h2 {
+            text-align: left;
+            margin: 0px 0px 40px;
+
+            @include mobile {
+                text-align: center;
+                margin: 0px 0px 18px;
+            }
+        }
+
+        .form {
+            &-col {
+                &:last-child {
+                    flex: 0 0 60%;
+
+                    p.form-text {
+                        text-align: right;
+                        margin-left: auto;
+
+                        @include mobile {
+                            text-align: left;
+                            margin: 0;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+
+            .button {
+                margin-left: auto;
+            }
         }
     }
 }

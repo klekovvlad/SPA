@@ -24,6 +24,7 @@
         border-width: 1px;
         border-style: solid;
         border-image-slice: 1;
+        width: 100%;
 
         @include mobile {
             width: 100%;

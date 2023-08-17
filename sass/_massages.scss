@@ -1,0 +1,147 @@
+.massages {
+    &-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .massage {
+        &-item {
+            padding: 24px 60px;
+            border: 1px solid var(--color-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include tablet {
+                padding: 24px 30px;
+            }
+
+            @include mobile {
+                flex-direction: column;
+                align-items: center;
+                justify-content: start;
+                padding: 20px 35px;
+            }
+
+            &-img {
+                flex: 0 0 15%;
+                width: 15%;
+                aspect-ratio: 1 / 1;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: center;
+
+                @include mobile {
+                    flex: 0 0 120px;
+                    width: 120px;
+                }
+            }
+
+            &-info {
+                padding: 0px 30px 0px 90px;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: start;
+                gap: 20px;
+
+                @include tablet {
+                    padding: 0px 20px;
+                }
+
+                @include mobile {
+                    gap: 4px;
+                    padding: 0px 0px 20px;
+                }
+            }
+
+            &-title {
+                font-size: 30px;
+                font-weight: 600;
+
+                @include tablet {
+                    font-size: 24px;
+                    line-height: 1.2;
+                }
+
+                @include mobile {
+                    font-size: 21px;
+                    
+                }
+            }
+
+            &-term {
+                flex: 0 0 20%;
+                height: calc(100% + (24px * 2));
+                padding: 24px 0px 24px 70px;
+                border-left: 1px solid var(--color-border);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                gap: 8px;
+                position: relative;
+
+                @include tablet {
+                    flex: 0 0 30%;
+                    padding: 24px 0px 24px 30px;
+                }
+
+                @include mobile {
+                    width: calc(100% + (35px * 2));
+                    flex: 0 0 164px;
+                    border-left: none;
+                    border-top: 1px solid var(--color-border);
+                    height: 100%;
+                    padding: 20px 35px 0px;
+                }
+
+                @include starTop();
+
+                &::after {
+                    left: 0;
+                    top: 50%;
+
+                    @include mobile {
+                        left: 50%;
+                        top: 0;
+                    }
+                }
+            }
+
+            &-time,
+            &-price {
+                .value {
+                    font-weight: 700;
+                }
+            }
+
+            &-time {
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                gap: 10px;
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    background: url('../img/icons/time.svg') no-repeat center;
+                    background-size: contain;
+                }
+            }
+
+            &-price {
+                font-size: 30px;
+            }
+
+            .button-dark {
+                width: 100%;
+                padding: 16px 30px;
+                font-size: 14px;
+            }
+        }
+    }
+}

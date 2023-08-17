@@ -1,0 +1,68 @@
+.promotions {
+    padding: 30px 0px 130px;
+    &-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 65px 30px;
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            grid-gap: 40px;
+        }
+
+       .promotion {
+            &-img {
+                width: 100%;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: calc(100% + 20px);
+                    height: calc(100% + 20px);
+                    border: 1px solid var(--color-border);
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
+                }
+
+                @include starTop();
+
+                &::after {
+                    transform: translate(-50%, calc(-50% - 10px));
+                }
+
+                img {
+                    width: 100%;
+                    aspect-ratio: 41 / 29;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            &-title {
+                margin: 20px 0px 10px;
+                line-height: 1.5;
+                font-size: 24px;
+
+                @include mobile {
+                    font-size: 18px;
+                }
+            }
+
+            &-desc {
+                font-size: 14px;
+                margin: 0px 0px 20px;
+
+                @include mobile {
+                    font-size: 12px;
+                }
+            }
+       }
+    }
+}

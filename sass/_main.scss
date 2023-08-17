@@ -1,0 +1,15 @@
+main {
+
+    &:not(.homepage) {
+        padding-top: calc(172px + 44px);
+        @include mobile {
+            padding-top: calc(52px + 62px);
+        }
+
+        h1 {
+            margin: 30px 0px 0px;
+        }
+    }
+
+
+}

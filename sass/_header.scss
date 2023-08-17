@@ -11,6 +11,26 @@
             display: none;
         }
 
+        .social-links {
+            justify-content: center;
+            gap: 20px;
+            margin: 0px 50px;
+
+            &__small {
+                gap: 8px;
+                justify-content: end;
+                margin: 0 0 0 auto;
+
+                @include tablet {
+                    display: none;
+                }
+            }
+        }
+
+        .phone {
+            margin-left: 16px;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -150,6 +170,16 @@
             transition: max-height .3s linear;
             .container {
                 max-height: 62px;
+            }
+
+            .social-links {
+                justify-content: start;
+                gap: 35px;
+
+                .social-link {
+                    flex: 0 0 60px;
+                    aspect-ratio: 1 / 1;
+                }
             }
 
             &.open {
@@ -322,6 +352,7 @@
                         }
 
                         .button {
+                            margin: 20px 0px 0px;
                             width: 100%;
                         }
                     }
@@ -430,7 +461,6 @@
     .phone {
         font-size: 17px;
         font-weight: 600;
-        margin-left: auto;
         white-space: nowrap;
 
         @include tablet {
