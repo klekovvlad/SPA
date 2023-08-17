@@ -1,11 +1,15 @@
 .photos {
     padding: 140px 30px 50px;
+    overflow-x: hidden;
 
     @include mobile {
         padding: 50px 0px 40px;
     }
 
     h2 {
+        .gold {
+            color: var(--color-border);
+        }
         font-size: 120px;
 
         @include tablet {

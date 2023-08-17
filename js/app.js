@@ -115,6 +115,65 @@ if(PhotosSliders.length > 0) {
     })
 }
 
+//Слайдер отзывов
+//Слайдер отзывов / Видео
+
+const feedbackVideoSlider = document.querySelector('.feedback-video');
+
+if(feedbackVideoSlider) {
+    const feedbackVideoSwiper = new Swiper(feedbackVideoSlider, {
+        navigation: {
+            prevEl: '.slider-button-prev',
+            nextEl: '.slider-button-next'
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.1,
+                spaceBetween: 16,
+                centeredSlides: true,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                centeredSlides: false
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            }
+        }
+    })
+}
+
+//Слайдер отзывов / Комментарии
+
+const feedbackCommentSlider = document.querySelector('.feedback-comments');
+
+if(feedbackCommentSlider) {
+    const feedbackCommentSwiper = new Swiper(feedbackCommentSlider, {
+        breakpoints: {
+            0: {
+                slidesPerView: 1.1,
+                spaceBetween: 16,
+                centeredSlides: true,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                centeredSlides: false
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            }
+        },
+        navigation: {
+            prevEl: '.slider-button-prev',
+            nextEl: '.slider-button-next'
+        }
+    })
+}
+
 
 //Список категорий для услуг в адаптиве
 

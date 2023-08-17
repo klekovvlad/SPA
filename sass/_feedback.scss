@@ -1,0 +1,164 @@
+.feedback {
+    padding: 50px 0px;
+    overflow-x: hidden;
+
+    @include mobile {
+        padding: 35px 0px;
+    }
+
+    .swiper {
+        overflow: visible;
+
+        @include mobile {
+            position: relative;
+            width: 100vw;
+            left: -15px;
+            padding: 15px;
+        }
+
+        &-slide {
+            opacity: 0;
+            transition: opacity .5s linear;
+
+            &-active,
+            &-next {
+                opacity: 1;
+            }
+
+            @include mobile {
+                &-prev {
+                    opacity: 1;
+                }
+            }
+
+            @media (min-width: 768px) {
+                &-next + .swiper-slide {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &-video {
+        padding: 40px 0px 0px;
+
+        @include mobile {
+            padding: 20px 0px 0px;
+        }
+
+        &-item {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                background: rgba($color: #26272B, $alpha: .5);
+                outline: 1px solid var(--color-border);
+                outline-offset: -10px;
+            }
+            img {
+                height: 255px;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+
+                @include mobile {
+                    height: 195px;
+                }
+            }
+
+            &-title {
+                color: #fff;
+                font-size: 16px;
+                position: absolute;
+                left: 50%;
+                bottom: 24px;
+                transform: translate(-50%, 0);
+                z-index: 3;
+
+                @include mobile {
+                    font-size: 14px;
+                    bottom: 14px;
+                }
+            }
+
+            &-play {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 70px;
+                height: 70px;
+                z-index: 3;
+                border-radius: 50%;
+                background: var(--color-gold) url('../img/icons/play.svg') no-repeat calc(50% + 2px) 50%;
+
+                @include mobile {
+                    width: 55px;
+                    height: 55px;
+                    background-size: 40%;
+                }
+            }
+        }
+    }
+
+    &-comments {
+        padding: 40px 0px 0px;
+        
+        &-item {
+            padding: 28px 30px;
+            border: 1px solid var(--color-border);
+
+            @include mobile {
+                padding: 28px 20px;
+            }
+
+            &-top {
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                gap: 16px;
+                padding: 0px 0px 10px;
+            }
+
+            &-picture {
+                flex: 0 0 62px;
+                aspect-ratio: 1 / 1;
+                border-radius: 50%;
+                background: var(--color-border);
+            }
+
+            &-name {
+                font-weight: 700;
+            }
+
+            .stars {
+                padding: 5px 0px 8px;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                grid-gap: 5px;
+
+                .star {
+                    width: 12px;
+                    height: 12px;
+                    background: url('../img/icons/star.svg') no-repeat center;
+                    background-size: contain;
+                }
+            }
+
+            &-date {
+                font-size: 14px;
+                opacity: 0.5;
+            }
+        }
+        
+    }
+
+    .button-border__dark {
+        margin: 40px auto 0;
+    }
+}

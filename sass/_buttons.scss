@@ -81,3 +81,33 @@
     background: var(--color-border) url('../img/icons/shopping-cart.svg') no-repeat center;
     background-size: 20px 20px;
 }
+
+.slider-button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    background: transparent url('../img/icons/slider-arrow.svg') no-repeat center;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+
+    &:hover {
+        background: var(--color-border) url('../img/icons/slider-arrow.svg') no-repeat center;
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    &-prev {
+        transform: translate(0, -50%);
+        left: -70px;
+    }
+
+    &-next {
+        transform: translate(0, -50%) rotate(180deg);
+        right: -70px;
+    }
+}
