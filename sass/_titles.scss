@@ -44,7 +44,8 @@ h1, h2, h3, h4 {
     }
 }
 
-h2.has-star {
+h2.has-star,
+h3.has-star {
     &::before,
     &::after {
         content: '';

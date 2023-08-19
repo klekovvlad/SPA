@@ -110,6 +110,10 @@
         flex-wrap: wrap;
         flex: 0 0 100%;
         width: 100%;
+
+        @include mobile {
+            gap: 20px;
+        }
     }
 
     &-col {
@@ -187,6 +191,97 @@
             .button {
                 margin-left: auto;
             }
+        }
+    }
+}
+
+.form-cards {
+    padding: 0px 0px 180px;
+
+    &-thanks {
+        margin: 50px 0px 0px;
+        @include fontTitle(400, 'normal');
+        text-align: center;
+        font-size: 72px;
+        text-transform: uppercase;
+        color: var(--color-border);
+
+        @include mobile {
+            font-size: 48px;
+        }
+    }
+
+    &-wrapper {
+        color: #fff;
+        background: var(--color-text);
+        padding: 30px 15px;
+
+        @include mobile {
+            padding: 20px 15px 40px;
+        }
+    }
+
+    .form,
+    &-titles {
+        max-width: min(630px, 100%);
+        margin: 0px auto;
+    }
+
+    &-titles {
+        display: grid;
+        grid-template-columns: 1fr 160px;
+        grid-template-rows: auto auto;
+        align-items: center;
+        grid-gap: 32px 50px;
+
+        @include mobile {
+            grid-template-columns: 1fr 100px;
+            grid-gap: 0;
+            margin: 0px 0px 40px;
+        }
+
+
+        h2 {
+            margin-top: auto;
+            font-size: 48px;
+            text-align: left;
+
+            @include mobile {
+                font-size: 30px;
+                margin: 0;
+            }
+        }
+
+        p {
+            margin-bottom: auto;
+
+            @include mobile {
+                grid-column-start: span 2;
+            }
+        }
+
+        .form-cards-logo {
+            grid-row-start: span 2;
+            object-fit: contain;
+
+            @include mobile {
+                grid-row-start: 1;
+                grid-column-start: 2;
+                width: 100px;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+    }
+
+    .form {
+        width: 100%;
+        &-col {
+            width: 100%;
+        }
+
+        .button {
+            margin: 0px auto;
         }
     }
 }

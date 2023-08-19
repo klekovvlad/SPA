@@ -39,6 +39,12 @@
         }
     }
 
+    textarea.input {
+        resize: vertical;
+        min-height: 100px;
+        max-height: 500px;
+    }
+
     &__dark {
         .input-item-title {
             color: var(--color-border);
@@ -63,6 +69,7 @@
         gap: 12px;
 
         &::before {
+            flex: 0 0 22px;
             content: '';
             display: inline-block;
             border-image: var(--gradient-button);
@@ -71,6 +78,13 @@
             border-image-slice: 1;
             width: 22px;
             height: 22px;
+        }
+    }
+
+    input[type=checkbox]:checked ~ label {
+        &::before {
+            background: url('../img/icons/checkbox.svg') no-repeat center, var(--gradient-button);
+            background-size: 70%, cover;
         }
     }
 }
