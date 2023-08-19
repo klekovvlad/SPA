@@ -285,3 +285,72 @@
         }
     }
 }
+
+.form-cart {
+    color: #fff;
+    background: var(--color-text);
+    padding: 56px 60px;
+
+    @include mobile {
+        padding: 50px 15px;
+    }
+
+    &-title {
+        font-size: 24px;
+        font-weight: 700;
+
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    .cart-summary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 54px;
+
+        @include mobile {
+            flex-wrap: wrap;
+            gap: 12px;
+            order: -1;
+        }
+
+        &-price {
+
+            @include mobile {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            &-title {
+                margin: 0px 0px 12px;
+
+                @include mobile {
+                    margin: 0;
+                }
+            }
+
+            &-value {
+                font-size: 30px;
+
+                .value {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .form {
+        &-col {
+            width: 100%;
+        }
+
+        &-row:last-child {
+            padding: 20px 0px 0px;
+            align-items: center;
+        }
+    }
+}

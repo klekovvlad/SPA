@@ -1,0 +1,36 @@
+.slider {
+    overflow: hidden;
+    
+    .swiper {
+        overflow: visible;
+
+        @include mobile {
+            position: relative;
+            width: 100vw;
+            left: -15px;
+            padding: 15px;
+        }
+
+        &-slide {
+            opacity: 0;
+            transition: opacity .5s linear;
+
+            &-active,
+            &-next {
+                opacity: 1;
+            }
+
+            @include mobile {
+                &-prev {
+                    opacity: 1;
+                }
+            }
+
+            @media (min-width: 768px) {
+                &-next + .swiper-slide {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

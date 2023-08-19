@@ -11,4 +11,11 @@
             object-position: center;
         }
     }
+
+    &__small {
+        .social-link {
+            width: 25px;
+            height: 25px;
+        }
+    }
 }

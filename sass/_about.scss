@@ -7,17 +7,28 @@
 
     &-wrapper {
         padding: 40px 0px 0px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        
         gap: 50px;
 
+        &:first-child {
+            padding: 0;
+        };
+
         @include mobile {
+            flex-wrap: wrap;
             padding: 18px 0px 0px;
-            grid-template-columns: 1fr;
+
+            &:first-child {
+                padding: 0;
+            };
         }
     }
 
     &-numbers {
+        flex: 0 0 calc(50% - (50px / 2));
         display: flex;
         align-items: center;
         justify-content: center;
@@ -25,8 +36,10 @@
         gap: 40px 50px;
 
         @include mobile {
+            width: 100%;
             justify-content: space-between;
             gap: 26px 45px;
+            flex: 0 0 100%;
         }
     }
 
@@ -40,13 +53,13 @@
         gap: 18px;
 
         @include mobile {
-            flex: 0 0 150px;
+            flex: 0 0 130px;
 
             &:nth-child(3) {
                 flex: 0 0 100%;
 
                 .about-number {
-                    width: 150px;
+                    width: 140px;
                     margin: 0px auto;
                 }
             }
@@ -73,8 +86,8 @@
         border: 1px solid var(--color-border);
 
         @include mobile {
-            flex: 0 0 150px;
-            width: 150px;
+            flex: 0 0 140px;
+            width: 140px;
             aspect-ratio: 1 / 1;
         }
     }

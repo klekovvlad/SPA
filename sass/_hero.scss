@@ -1,13 +1,44 @@
-main.homepage {
-    .hero {
-        background-image: url('../img/homepage-header-bg.png');
+main{
+    &.homepage {
+        .hero {
+            background-image: url('../img/homepage-header-bg.png');
+    
+            @include mobile {
+                &-buttons {
+                    flex-direction: column;
+                    .button,
+                    .button-border {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    &.area {
+        .hero {
+            padding-top: 190px;
+            background-position: 30% 100%;
 
-        @include mobile {
+            @include mobile {
+                padding: calc(52px + 62px) 0px 60px;
+            }
+
+            .breadcrumbs {
+                margin: 0px 0px 78px;
+
+                @include mobile {
+                    margin: 0px 0px 200px;
+                }
+            }
+
             &-buttons {
-                flex-direction: column;
-                .button,
-                .button-border {
-                    width: 100%;
+                .hero-social {
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        object-fit: cover;
+                        object-position: center;
+                    }
                 }
             }
         }
@@ -56,6 +87,7 @@ main.homepage {
         left: 0;
         right: 0;
         height: 170px;
+        z-index: 1;
 
         @include mobile {
             height: 260px;
@@ -64,7 +96,7 @@ main.homepage {
 
     &::before {
         top: 0;
-        background: linear-gradient(180deg, rgba(38, 39, 43, 0.00) 0%, rgba(0, 0, 0, 0.01) 99.99%, rgba(38, 39, 43, 0.00) 100%, #26272B 100%);
+        background: linear-gradient(0deg, rgba(38, 39, 43, 0.00) 0%, #26272B 100%);
         opacity: 0.7;
     }
 

@@ -37,6 +37,19 @@
         &::placeholder {
             opacity: 0.5;
         }
+
+        &-info {
+            padding: 0px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            height: 50px;
+        }
+    }
+
+    input[type=date].input {
+        min-width: 100%;
+        min-height: 64px;
     }
 
     textarea.input {
@@ -53,6 +66,78 @@
         .input {
             color: #fff;
             background: rgba($color: #fff, $alpha: 0.1);
+        }
+    }
+
+    &__quantity {
+        position: relative;
+
+        .input {
+            padding: 14px;
+            pointer-events: none;
+            text-align: center;
+        }
+        
+        &.input-item__dark {
+            button {
+                &::before,
+                &::after {
+                    background: #fff;
+                }
+            }
+        }
+        
+        button {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 1px solid var(--color-border);
+            background: transparent;
+            bottom: calc(50px / 2);
+            transform: translate(0, 50%);
+
+            &.disabled {
+                pointer-events: none;
+                opacity: 0.5;
+            }
+
+            &::after,
+            &::before {
+                content: '';
+                width: 11px;
+                height: 1px;
+                border-radius: 2px;
+                background: var(--color-text);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(calc(-50% + 0.5px), -50%);
+
+                @include mobile {
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            &[data-action=minus] {
+                left: 10px;
+                &::after {
+                    display: none;
+                }
+            }
+
+            &[data-action=plus] {
+                right: 10px;
+
+                &::after {
+                    transform: translate(calc(-50% + 0.5px), -50%) rotate(-90deg);
+                    
+                    @include mobile {
+                        transform: translate(-50%, -50%) rotate(-90deg);
+                    }
+                }
+            }
+
         }
     }
 
@@ -87,4 +172,8 @@
             background-size: 70%, cover;
         }
     }
+}
+
+input[type=radio] {
+    display: none;
 }

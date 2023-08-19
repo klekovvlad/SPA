@@ -1,21 +1,19 @@
 //Burger Menu
 
-if(window.innerWidth < 768) {
-    const headerMobile = document.querySelector('.header-mobile');
+const headerMobile = document.querySelector('.header-mobile');
 
-    if(headerMobile) {
+if(headerMobile) {
 
-        headerMobile.addEventListener('click', (e) => {
-            if(e.target.classList.contains('header-burger-button')) {
-                headerMobile.classList.contains('open') ? headerMobile.classList.remove('open') : headerMobile.classList.add('open');
-            }
-            if(e.target.classList.contains('menu-item__haschildren') || e.target.parentElement.classList.contains('menu-item__haschildren')) {
-                e.preventDefault();
-                e.target.parentElement.classList.contains('open') ? e.target.parentElement.classList.remove('open') : e.target.parentElement.classList.add('open')
-            }
-        })
+    headerMobile.addEventListener('click', (e) => {
+        if(e.target.classList.contains('header-burger-button')) {
+            headerMobile.classList.contains('open') ? headerMobile.classList.remove('open') : headerMobile.classList.add('open');
+        }
+        if(e.target.classList.contains('menu-item__haschildren') || e.target.parentElement.classList.contains('menu-item__haschildren')) {
+            e.preventDefault();
+            e.target.parentElement.classList.contains('open') ? e.target.parentElement.classList.remove('open') : e.target.parentElement.classList.add('open')
+        }
+    })
 
-    }
 }
 
 // window.onclick = (e) => console.log(e.target)
@@ -75,7 +73,7 @@ const PhotosSliders = document.querySelectorAll('.photos-slider');
 
 if(PhotosSliders.length > 0) {
     PhotosSliders.forEach((photosSlider, index) => {
-        if(index === 0) {
+        if(photosSlider.classList.contains('photos-top')) {
             const photosSwiper = new Swiper(photosSlider, {
                 spaceBetween: 30,
                 slidesPerView: 3,
@@ -113,6 +111,34 @@ if(PhotosSliders.length > 0) {
             })
         }
     })
+}
+
+//Базовый слайдер
+
+const sliderWrapper = document.querySelector('.slider-wrapper');
+if(sliderWrapper) {
+    const sliderSwiper = new Swiper(sliderWrapper, {
+        navigation: {
+            prevEl: '.slider-button-prev',
+            nextEl: '.slider-button-next'
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.1,
+                spaceBetween: 16,
+                centeredSlides: true,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                centeredSlides: false
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            }
+        }
+    }) 
 }
 
 //Слайдер отзывов
@@ -188,6 +214,33 @@ if(servicesList) {
                 servicesListItems[i].classList.remove('active')
             }
             e.target.parentElement.classList.add('active')
+        }
+    })
+}
+
+//Поле для ввода количества
+
+const quantityInputs = document.querySelectorAll('.input-item__quantity');
+
+if(quantityInputs.length > 0) {
+    quantityInputs.forEach(inputWrapper => {
+        const input = inputWrapper.querySelector('.input')
+        const buttonMinus = inputWrapper.querySelector('button[data-action=minus]')
+        if(input.value === 0) {
+            buttonMinus.classList.add('disabled')
+        }
+        inputWrapper.onclick = (e) => {
+            if(e.target === buttonMinus) {
+                if(input.value > 0) {
+                    input.value = Number(input.value - 1)
+                }else {
+                    buttonMinus.classList.add('disabled')
+                }
+            }
+            if(e.target.dataset.action === 'plus') {
+                input.value = Number(input.value) + 1;
+                buttonMinus.classList.remove('disabled')
+            }
         }
     })
 }

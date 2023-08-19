@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA Park</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css">
+
+</head>
+<body>
+    
+    <header class="header header-desktop">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="header-top">
+                    <a href="/" class="logo">
+                        <img src="img/logo.png" alt="logo">
+                    </a>
+                    <div class="header-adress">
+                        <div class="header-adress-item">
+                            <img src="img/icons/adress.svg" alt="adress" class="header-adress-icon">
+                            Сургут, ул. Проспект Мира, 25
+                        </div>
+                        <div class="header-adress-item">
+                            <img src="img/icons/clock.svg" alt="clock" class="header-adress-icon">
+                            Пн-Вс 11:00-23:00
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a class="social-link" href="">
+                            <img src="img/icons/tg-gold.svg" alt="">
+                        </a>
+                        <a class="social-link" href="">
+                            <img src="img/icons/vk-gold.svg" alt="">
+                        </a>
+                        <a class="social-link" href="">
+                            <img src="img/icons/ok-gold.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="social-links social-links__small">
+                        <a class="social-link" href="">
+                            <img src="img/icons/wa-color.svg" alt="">
+                        </a>
+                        <a class="social-link" href="">
+                            <img src="img/icons/viber.svg" alt="">
+                        </a>
+                        <a href="tel:+7346252-30-10" class="phone">+7(3462) 52-30-10</a>
+                    </div>
+                    
+                    <button class="button">Заказать звонок</button>
+                </div>
+            </div>
+
+            <nav class="header-nav">
+                <nav class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a class="menu-link" href="/">Главная</a>
+                        </li>
+                        <li class="menu-item menu-item__haschildren">
+                            <a class="menu-link" href="/">SPA пространства</a>
+                            <ul class="menu-children">
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">Индия</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">Индия</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">Индия</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">Индия</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item__haschildren">
+                            <a class="menu-link" href="/">Услуги массажа и спа</a>
+                            <ul class="menu-children">
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">дополнительные услуги</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">дополнительные услуги</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">дополнительные услуги</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">дополнительные услуги</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="/">Подарочные сертификаты</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="/">О нас</a>
+                        </li>
+                        <li class="menu-item menu-item__haschildren">
+                            <a class="menu-link" href="/">Акции и бонусы</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="/">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="/" class="cart-icon cart-icon-active" data-quantity="2"></a>
+            </nav>
+        </div>
+    </header>
+
+    <header class="header header-mobile">
+        <div class="container">
+            <div class="header-top">
+                <button class="header-burger-button">
+                    <span></span><span></span><span></span>
+                </button>
+                <a href="/" class="logo">
+                    <img src="img/logo.png" alt="logo">
+                </a>
+                <div class="header-top-contacts">
+                    <a href="tel:+7346252-30-10" class="phone">+7(3462) 52-30-10</a>
+                    <a href="/" class="cart-icon cart-icon-active" data-quantity="2"></a>
+                </div>
+            </div>
+            <div class="header-burger-menu">
+                <nav class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a class="menu-link" href="/">Главная</a>
+                        </li>
+                        <li class="menu-item menu-item__haschildren">
+                            <a class="menu-link" href="/">SPA пространства</a>
+                            <ul class="menu-children">
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">Индия</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">Индия</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">Индия</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">Индия</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item__haschildren">
+                            <a class="menu-link" href="/">Услуги массажа и спа</a>
+                            <ul class="menu-children">
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">дополнительные услуги</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">дополнительные услуги</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">дополнительные услуги</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">дополнительные услуги</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="/">Подарочные сертификаты</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="/">О нас</a>
+                        </li>
+                        <li class="menu-item menu-item__haschildren">
+                            <a class="menu-link" href="/">Акции и бонусы</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="/">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="+7(3462)523010" class="phone">+7(3462) 52-30-10</a>
+                <div class="social-links">
+                    <a class="social-link" href="">
+                        <img src="img/icons/wa-color.svg" alt="">
+                    </a>
+                    <a class="social-link" href="">
+                        <img src="img/icons/viber.svg" alt="">
+                    </a>
+                </div>
+                <button class="button">Заказать звонок</button>
+                <div class="header-adress">
+                    <div class="header-adress-item">
+                        <img src="img/icons/adress.svg" alt="adress" class="header-adress-icon">
+                        Сургут, ул. Проспект Мира, 25
+                    </div>
+                    <div class="header-adress-item">
+                        <img src="img/icons/clock.svg" alt="clock" class="header-adress-icon">
+                        Пн-Вс 11:00-23:00
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a class="social-link" href="">
+                        <img src="img/icons/tg-gold.svg" alt="">
+                    </a>
+                    <a class="social-link" href="">
+                        <img src="img/icons/vk-gold.svg" alt="">
+                    </a>
+                    <a class="social-link" href="">
+                        <img src="img/icons/ok-gold.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="area">
+
+        <section class="hero" style="background-image: url('img/areas-bg.png');">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="/" class="breadcrumbs-link">Главная</a>
+                    <a href="/" class="breadcrumbs-link">Спа пространства</a>
+                    <span class="breadcrumbs-curent">Индия</span>
+                </div>
+
+                <h1 class="hero-title">ИНДИЯ</h1>
+                <p class="hero-subtitle">Уникальная особенность этого номера - возможность посетить самый настоящий хамам с удивительным по своим ощущениям мыльным массажем...</p>
+                <div class="hero-buttons">
+                    <a href="/" class="button">ЗАПИСАТЬСЯ</a>
+                    <a class="hero-social" href="#"><img src="img/icons/wa-color.svg" alt=""></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="photos">
+
+            <div class="photos-slider photos-bottom swiper">
+                <div class="swiper-wrapper">
+                    <a href="#" class="photos-bottom-item swiper-slide">
+                        <img src="img/gallery/1.png" alt="">
+                    </a>
+                    <a href="#" class="photos-bottom-item swiper-slide">
+                        <img src="img/gallery/1.png" alt="">
+                    </a>
+                    <a href="#" class="photos-bottom-item swiper-slide">
+                        <img src="img/gallery/1.png" alt="">
+                    </a>
+                    <a href="#" class="photos-bottom-item swiper-slide">
+                        <img src="img/gallery/1.png" alt="">
+                    </a>
+                    <a href="#" class="photos-bottom-item swiper-slide">
+                        <img src="img/gallery/1.png" alt="">
+                    </a>
+                    <a href="#" class="photos-bottom-item swiper-slide">
+                        <img src="img/gallery/1.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="bonuses">
+            <div class="container">
+                <div class="bonuses-wrapper">
+                    <div class="bonuses-text">
+                        <p>Уникальная особенность этого номера - возможность посетить самый настоящий хамам с удивительным по своим ощущениям мыльным массажем. Отдых на горячем мраморе в облаке невесомой мыльной пены, пилинг и мыльный массаж очистят душу и тело, придадут сил и вернут хорошее настроение. SPA-процедуры в хамаме не только очень приятны, но и полезны. Уникальное сочетание температуры и влажности позволяет находиться там достаточно долго, не ощущая какого-либо дискомфорта. Ваши мышцы расслабляются, стресс и недуги отступают прочь</p>
+                        <p>В номере имеется небольшой хаммам, 2 массажных кресла, кровать, телевизор, 2 кресла, стол, встроенная гардеробная, душ с санузлом. Номер возможно снять на сутки,  со  спа программой, либо без доп услуг Расчитан на 2 гостя</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="prices">
+            <div class="container">
+                <h2><span class="italic gold">Цены</span> и услуги</h2>
+                <div class="prices-wrapper">
+                    <ul class="prices-list">
+                        <h3>Программы Спа пространства «Индия»</h3>
+                        <li class="prices-list-item">
+                            <input type="radio" id="programs-1" name="programs">
+                            <label for="programs-1" class="prices-item">
+                                <div class="prices-item-text">
+                                    <div class="prices-item-title">Прогрев в хаммам / массаж / чайная церемония</div>
+                                    <div class="prices-item-desc">30  мин приход/уход, 30 мин прогрев, 90 минут массаж, 15 минут чайная церемония. Итого 160 минут.</div>
+                                </div>
+                                <div class="prices-item-text">
+                                    <div class="prices-item-info">
+                                        Время
+                                        <span class="value">160 мин.</span>
+                                    </div>
+                                    <div class="prices-item-info">
+                                        1 гость
+                                        <span class="value">4 500 ₽</span>
+                                    </div>
+                                    <div class="prices-item-info">
+                                        2 гостя
+                                        <span class="value">7 000 ₽</span>
+                                    </div>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="prices-list-item">
+                            <input type="radio" id="programs-2" name="programs">
+                            <label for="programs-2" class="prices-item">
+                                <div class="prices-item-text">
+                                    <div class="prices-item-title">Прогрев в хаммам / массаж / чайная церемония</div>
+                                    <div class="prices-item-desc">30  мин приход/уход, 30 мин прогрев, 90 минут массаж, 15 минут чайная церемония. Итого 160 минут.</div>
+                                </div>
+                                <div class="prices-item-text">
+                                    <div class="prices-item-info">
+                                        Время
+                                        <span class="value">160 мин.</span>
+                                    </div>
+                                    <div class="prices-item-info">
+                                        1 гость
+                                        <span class="value">4 500 ₽</span>
+                                    </div>
+                                    <div class="prices-item-info">
+                                        2 гостя
+                                        <span class="value">7 000 ₽</span>
+                                    </div>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="prices-list-item">
+                            <input type="radio" id="programs-3" name="programs">
+                            <label for="programs-3" class="prices-item">
+                                <div class="prices-item-text">
+                                    <div class="prices-item-title">Прогрев в хаммам / массаж / чайная церемония</div>
+                                    <div class="prices-item-desc">30  мин приход/уход, 30 мин прогрев, 90 минут массаж, 15 минут чайная церемония. Итого 160 минут.</div>
+                                </div>
+                                <div class="prices-item-text">
+                                    <div class="prices-item-info">
+                                        Время
+                                        <span class="value">160 мин.</span>
+                                    </div>
+                                    <div class="prices-item-info">
+                                        1 гость
+                                        <span class="value">4 500 ₽</span>
+                                    </div>
+                                    <div class="prices-item-info">
+                                        2 гостя
+                                        <span class="value">7 000 ₽</span>
+                                    </div>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="prices-list-item">
+                            <input type="radio" id="programs-4" name="programs">
+                            <label for="programs-4" class="prices-item">
+                                <div class="prices-item-text">
+                                    <div class="prices-item-title">Прогрев в хаммам / массаж / чайная церемония</div>
+                                    <div class="prices-item-desc">30  мин приход/уход, 30 мин прогрев, 90 минут массаж, 15 минут чайная церемония. Итого 160 минут.</div>
+                                </div>
+                                <div class="prices-item-text">
+                                    <div class="prices-item-info">
+                                        Время
+                                        <span class="value">160 мин.</span>
+                                    </div>
+                                    <div class="prices-item-info">
+                                        1 гость
+                                        <span class="value">4 500 ₽</span>
+                                    </div>
+                                    <div class="prices-item-info">
+                                        2 гостя
+                                        <span class="value">7 000 ₽</span>
+                                    </div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                    <ul class="prices-list">
+                        <h3>Аренда </h3>
+                        <li class="prices-list-item">
+                            <input type="radio" id="rent-1" name="rent">
+                            <label for="rent-1" class="prices-item">
+                                <div class="prices-item-text">
+                                    <div class="prices-item-title">Аренда номера (1-2 человека) с хамама</div>
+                                    <div class="prices-item-desc">Дополнительный час 1500 ₽</div>
+                                </div>
+                                <div class="prices-item-text">
+                                    <div class="prices-item-info">
+                                        Время
+                                        <span class="value">5 часов</span>
+                                    </div>
+                                    <div class="prices-item-info">
+                                        1 - 2 гостя
+                                        <span class="value">15 000 ₽</span>
+                                    </div>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="prices-list-item">
+                            <input type="radio" id="rent-2" name="rent">
+                            <label for="rent-2" class="prices-item">
+                                <div class="prices-item-text">
+                                    <div class="prices-item-title">Аренда номера (1-2 человека) с хамама</div>
+                                    <div class="prices-item-desc">Дополнительный час 1500 ₽</div>
+                                </div>
+                                <div class="prices-item-text">
+                                    <div class="prices-item-info">
+                                        Время
+                                        <span class="value">5 часов</span>
+                                    </div>
+                                    <div class="prices-item-info">
+                                        1 - 2 гостя
+                                        <span class="value">15 000 ₽</span>
+                                    </div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="addcart">
+                    <div class="addcart-info">
+                        <div class="addcart-suptitle">Добавить в корзину</div>
+                        <div class="addcart-title">Прогрев в хаммам / массаж / чайная церемония</div>
+                        <p class="addcart-desc">30  мин приход/уход, 30 мин прогрев, 90 минут массаж, 15 минут чайная церемония. Итого 160 минут.</p>
+                        <div class="form">
+                            <div class="form-col">
+                                <div class="form-row">
+                                    <div class="input-item input-item__dark input-item__quantity">
+                                        <div class="input-item-title">Количество гостей</div>
+                                        <input type="text" value="2" class="input">
+                                        <button class="input-button" data-action="minus"></button>
+                                        <button class="input-button" data-action="plus"></button>
+                                    </div>
+                                    <div class="input-item input-item__dark">
+                                        <div class="input-item-title">Длительность</div>
+                                        <div class="input-info input">160 мин</div>
+                                    </div>
+                                    <div class="input-item input-item__dark">
+                                        <div class="input-item-title">Цена</div>
+                                        <div class="input-info input">7 000 ₽</div>
+                                    </div>
+                                    <div class="input-item input-item__dark input-item__quantity">
+                                        <div class="input-item-title">Количество услуг</div>
+                                        <input type="text" value="2" class="input">
+                                        <button class="input-button" data-action="minus"></button>
+                                        <button class="input-button" data-action="plus"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="addcart-summary">
+                        <div class="addcart-summary-price">
+                            <div class="title">Итого</div>
+                            <div class="value">14 000 ₽</div>
+                        </div>
+                        <button class="button-border">КУПИТЬ СЕРТИФИКАТ</button>
+                        <button class="button">ДОБАВИТЬ В КОРЗИНУ</button>
+                        <div class="social-links">
+                            <a href="" class="social-link">
+                                <img src="img/icons/wa-color.svg" alt="">
+                            </a>
+                            <a href="" class="social-link">
+                                <img src="img/icons/tg-color.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-prepayment">
+            <div class="container">
+                <div class="form-prepayment-wrapper">
+                    <h2>Предоплата</h2>
+                    <form action="" class="form">
+                        <div class="form-col">
+                            <div class="input-item">
+                                <div class="input-item-title">Сумма предоплаты</div>
+                                <input type="text" class="input" placeholder="Введите сумму">
+                            </div>
+                            <div class="input-item">
+                                <input type="text" class="input" placeholder="Услуга">
+                            </div>
+                            <p class="form-text">Значение "Сумма предоплаты" должно быть 15% от стоимости услуг, но не менее 1000 рублей</p>
+                        </div>
+
+                        <div class="form-col">
+                            <div class="input-item">
+                                <div class="input-item-title">Укажите ваши контактные данные</div>
+                                <input type="text" class="input" placeholder="Имя фамилия">
+                            </div>
+                            <div class="form-row">
+                                <div class="input-item">
+                                    <input type="text" class="input" placeholder="Телефон">
+                                </div>
+                                <div class="input-item">
+                                    <input type="email" class="input" placeholder="Email">
+                                </div>
+                            </div>
+                            <button type="submit" class="button">ОПЛАТИТЬ</button>
+                            <p class="form-text">Нажимая кнопку «Оплатить» Вы соглашаетесь с политикой конфиденциальности</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="places slider">
+            <div class="container">
+                <h2>Спа пространства</h2>
+                <div class="slider-wrapper swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="places-item swiper-slide">
+                            <img src="img/places/1.png" alt="" class="places-item-img">
+                            <div class="places-item-guest">до 2 гостей</div>
+                            <h3 class="places-item-title">ИНДИЯ</h3>
+                            <button class="button-card">Узнать больше</button>
+                        </a>
+                        <a href="#" class="places-item swiper-slide">
+                            <img src="img/places/1.png" alt="" class="places-item-img">
+                            <div class="places-item-guest">до 2 гостей</div>
+                            <h3 class="places-item-title">ИНДИЯ</h3>
+                            <button class="button-card">Узнать больше</button>
+                        </a>
+                        <a href="#" class="places-item swiper-slide">
+                            <img src="img/places/1.png" alt="" class="places-item-img">
+                            <div class="places-item-guest">до 2 гостей</div>
+                            <h3 class="places-item-title">ИНДИЯ</h3>
+                            <button class="button-card">Узнать больше</button>
+                        </a>
+                        <a href="#" class="places-item swiper-slide">
+                            <img src="img/places/1.png" alt="" class="places-item-img">
+                            <div class="places-item-guest">до 2 гостей</div>
+                            <h3 class="places-item-title">ИНДИЯ</h3>
+                            <button class="button-card">Узнать больше</button>
+                        </a>
+                        <a href="#" class="places-item swiper-slide">
+                            <img src="img/places/1.png" alt="" class="places-item-img">
+                            <div class="places-item-guest">до 2 гостей</div>
+                            <h3 class="places-item-title">ИНДИЯ</h3>
+                            <button class="button-card">Узнать больше</button>
+                        </a>
+                        <a href="#" class="places-item swiper-slide">
+                            <img src="img/places/1.png" alt="" class="places-item-img">
+                            <div class="places-item-guest">до 2 гостей</div>
+                            <h3 class="places-item-title">ИНДИЯ</h3>
+                            <button class="button-card">Узнать больше</button>
+                        </a>
+                    </div>
+                    <button class="slider-button slider-button-prev"></button>
+                    <button class="slider-button slider-button-next"></button>
+                </div>
+            </div>
+        </section>
+           
+        <section class="contacts">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad8b50bd96e11e6da2607e1e51554aff0bb391da37633c0e4637747d50491d2cf&amp;source=constructor" width="100%" height="605" frameborder="0"></iframe>
+                <div class="contacts-wrapper">
+                    <h2><span class="gold italic">Связь</span> с нами</h2>
+                    <p class="contacts-text">г. Сургут, ул. Проспект Мира, 25</p>
+                    <p class="contacts-text">ПН-ВС 11:00-23:00</p>
+                    <a href="tel:+7 (3462) 52-30-10" class="contacts-phone">+7 (3462) 52-30-10</a>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <img src="img/icons/tg-color.svg" alt="">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="img/icons/vk-color.svg" alt="">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="img/icons/ok-color.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer-nav">
+                <div class="footer-nav-col">
+                    <a href="#" class="footer-link-title">Главная</a>
+                </div>
+                <div class="footer-nav-col">
+                    <a href="#" class="footer-link-title">СПА пространства</a>
+                    <div class="footer-nav-list">
+                        <a href="#" class="footer-link">Индия</a>
+                        <a href="#" class="footer-link">Индия</a>
+                        <a href="#" class="footer-link">Индия</a>
+                        <a href="#" class="footer-link">Индия</a>
+                        <a href="#" class="footer-link">Индия</a>
+                        <a href="#" class="footer-link">Индия</a>
+                    </div>
+                </div>
+                <div class="footer-nav-col">
+                    <a href="#" class="footer-link-title">Услуги массажа и спа</a>
+                    <div class="footer-nav-list">
+                        <a href="#" class="footer-link">Спа программы</a>
+                        <a href="#" class="footer-link">Спа программы</a>
+                        <a href="#" class="footer-link">Спа программы</a>
+                    </div>
+                </div>
+                <div class="footer-nav-col">
+                    <a href="#" class="footer-link-title">подарочные сертификаты</a>
+                    <div class="footer-nav-list">
+                        <a href="#" class="footer-link">3000 руб.</a>
+                        <a href="#" class="footer-link">3000 руб.</a>
+                        <a href="#" class="footer-link">3000 руб.</a>
+                        <a href="#" class="footer-link">3000 руб.</a>
+                        <a href="#" class="footer-link">3000 руб.</a>
+                        <a href="#" class="footer-link">3000 руб.</a>
+                    </div>
+                </div>
+                <div class="footer-nav-col">
+                    <a href="#" class="footer-link-title">Акции и бонусы</a>
+                    <div class="footer-nav-list">
+                        <a href="#" class="footer-link">Акция 1+1</a>
+                        <a href="#" class="footer-link">Акция 1+1</a>
+                        <a href="#" class="footer-link">Акция 1+1</a>
+                    </div>
+                </div>
+                <div class="footer-nav-col">
+                    <a href="#" class="footer-link-title">О НАС</a>
+                </div>
+                <div class="footer-nav-col">
+                    <a href="#" class="footer-link-title">Контакты</a>
+                </div>
+            </nav>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">© ООО «SPA PARK», 2014-2017</div>
+                <a href="#" class="footer-bottom-link">политика обработки персональных данных</a>
+                <a href="#" class="footer-bottom-link">Публичная оферта об оказании услуг</a>
+            </div>
+        </div>
+    </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

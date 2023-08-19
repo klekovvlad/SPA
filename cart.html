@@ -106,7 +106,7 @@
                         </li>
                     </ul>
                 </nav>
-                <a href="/" class="cart-icon"></a>
+                <a href="/" class="cart-icon cart-icon-active" data-quantity="2"></a>
             </nav>
         </div>
     </header>
@@ -122,7 +122,7 @@
                 </a>
                 <div class="header-top-contacts">
                     <a href="tel:+7346252-30-10" class="phone">+7(3462) 52-30-10</a>
-                    <a href="/" class="cart-icon"></a>
+                    <a href="/" class="cart-icon cart-icon-active" data-quantity="2"></a>
                 </div>
             </div>
             <div class="header-burger-menu">
@@ -218,73 +218,110 @@
         <div class="container">
             <div class="breadcrumbs">
                 <a href="/" class="breadcrumbs-link">Главная</a>
-                <span class="breadcrumbs-curent">Акции</span>
+                <span class="breadcrumbs-curent">Корзина</span>
             </div>
-            <h1>Акции</h1>
+            <div class="titles">
+                <h1>Корзина</h1>
+                <div class="cart-value">2 услуги</div>
+            </div>
         </div>
 
-        <section class="promotions">
+        <section class="cart">
             <div class="container">
-                <div class="promotions-wrapper">
-                    <div class="promotion-item">
-                        <div class="promotion-img">
-                            <img src="img/places/1.png" alt="">
+                <ul class="cart-list">
+                    <li class="cart-item">
+                        <div class="cart-item-title">
+                            Прогрев в хаммам / массаж / чайная церемония
                         </div>
-                        <h3 class="promotion-title">подарочный сертификат в СПА</h3>
-                        <p class="promotion-desc">В номере имеется небольшой хаммам, 2 массажных кресла, кровать, телевизор, 2 кресла, стол, встроенная гардеробная, душ с санузлом. Номер возможно снять на сутки,  со  спа прогр....</p>
-                        <a href="#" class="button button-dark">Подробнее</a>
-                    </div>
-                    <div class="promotion-item">
-                        <div class="promotion-img">
-                            <img src="img/places/1.png" alt="">
+                        <div class="cart-item-desc">
+                            30  мин приход/уход, 30 мин прогрев, 90 минут массаж, 15 минут чайная церемония. Итого 160 минут.
                         </div>
-                        <h3 class="promotion-title">подарочный сертификат в СПА</h3>
-                        <p class="promotion-desc">В номере имеется небольшой хаммам, 2 массажных кресла, кровать, телевизор, 2 кресла, стол, встроенная гардеробная, душ с санузлом. Номер возможно снять на сутки,  со  спа прогр....</p>
-                        <a href="#" class="button button-dark">Подробнее</a>
-                    </div>
-                    <div class="promotion-item">
-                        <div class="promotion-img">
-                            <img src="img/places/1.png" alt="">
+                        <div class="cart-item-info">
+                            <div class="cart-item-guests">2 гостя</div>
+                            <div class="cart-item-time">120 мин</div>
+                            <div class="cart-item-price">7 000 ₽</div>
+                            <div class="input-item input-item__quantity">
+                                <input type="text" value="2" class="input">
+                                <button class="input-button" data-action="minus"></button>
+                                <button class="input-button" data-action="plus"></button>
+                            </div>
+                            <button class="delete"></button>
                         </div>
-                        <h3 class="promotion-title">подарочный сертификат в СПА</h3>
-                        <p class="promotion-desc">В номере имеется небольшой хаммам, 2 массажных кресла, кровать, телевизор, 2 кресла, стол, встроенная гардеробная, душ с санузлом. Номер возможно снять на сутки,  со  спа прогр....</p>
-                        <a href="#" class="button button-dark">Подробнее</a>
-                    </div>
-                    <div class="promotion-item">
-                        <div class="promotion-img">
-                            <img src="img/places/1.png" alt="">
+                    </li>
+                </ul>
+                <form action="" class="form form-cart">
+                    <div class="form-col">
+                        <div class="form-row">
+                            <div class="form-cart-title">Укажите ваши контактные данные</div>
                         </div>
-                        <h3 class="promotion-title">подарочный сертификат в СПА</h3>
-                        <p class="promotion-desc">В номере имеется небольшой хаммам, 2 массажных кресла, кровать, телевизор, 2 кресла, стол, встроенная гардеробная, душ с санузлом. Номер возможно снять на сутки,  со  спа прогр....</p>
-                        <a href="#" class="button button-dark">Подробнее</a>
-                    </div>
-                    <div class="promotion-item">
-                        <div class="promotion-img">
-                            <img src="img/places/1.png" alt="">
+                        <div class="form-row">
+                            <div class="input-item input-item__dark">
+                                <div class="input-item-title">Как вас зовут?</div>
+                                <input type="tel" class="input" placeholder="Имя">
+                            </div>
+                            <div class="input-item input-item__dark">
+                                <div class="input-item-title">Номер телефона</div>
+                                <input type="tel" class="input" placeholder="+7">
+                            </div>
+                            <div class="input-item input-item__dark">
+                                <div class="input-item-title">Ваша почта</div>
+                                <input type="email" class="input" placeholder="Email">
+                            </div>
                         </div>
-                        <h3 class="promotion-title">подарочный сертификат в СПА</h3>
-                        <p class="promotion-desc">В номере имеется небольшой хаммам, 2 массажных кресла, кровать, телевизор, 2 кресла, стол, встроенная гардеробная, душ с санузлом. Номер возможно снять на сутки,  со  спа прогр....</p>
-                        <a href="#" class="button button-dark">Подробнее</a>
-                    </div>
-                    <div class="promotion-item">
-                        <div class="promotion-img">
-                            <img src="img/places/1.png" alt="">
+                        <div class="form-row">
+                            <div class="input-item">
+                                <input type="checkbox" id="privacy" name="privacy-agree">
+                                <label for="privacy">Согласие на обработку персональных данных</label>
+                            </div>
+                            <div class="cart-summary">
+                                <div class="cart-summary-price">
+                                    <div class="cart-summary-price-title">Итого</div>
+                                    <div class="cart-summary-price-value"><span class="value">14 000</span> ₽</div>
+                                </div>
+                                <button class="button">ОПЛАТИТЬ</button>
+                            </div>
                         </div>
-                        <h3 class="promotion-title">подарочный сертификат в СПА</h3>
-                        <p class="promotion-desc">В номере имеется небольшой хаммам, 2 массажных кресла, кровать, телевизор, 2 кресла, стол, встроенная гардеробная, душ с санузлом. Номер возможно снять на сутки,  со  спа прогр....</p>
-                        <a href="#" class="button button-dark">Подробнее</a>
                     </div>
-                </div>
-                <div class="paginations">
-                    <button class="pagination-prev">Назад</button>
-                    <button class="pagination-page">1</button>
-                    <button class="pagination-page curent">2</button>
-                    <button class="pagination-page">3</button>
-                    <button class="pagination-next">Далее</button>
-                </div>
+                </form>
             </div>
         </section>
 
+        <section class="form-prepayment">
+            <div class="container">
+                <div class="form-prepayment-wrapper">
+                    <h2>Предоплата</h2>
+                    <form action="" class="form">
+                        <div class="form-col">
+                            <div class="input-item">
+                                <div class="input-item-title">Сумма предоплаты</div>
+                                <input type="text" class="input" placeholder="Введите сумму">
+                            </div>
+                            <div class="input-item">
+                                <input type="text" class="input" placeholder="Услуга">
+                            </div>
+                            <p class="form-text">Значение "Сумма предоплаты" должно быть 15% от стоимости услуг, но не менее 1000 рублей</p>
+                        </div>
+
+                        <div class="form-col">
+                            <div class="input-item">
+                                <div class="input-item-title">Укажите ваши контактные данные</div>
+                                <input type="text" class="input" placeholder="Имя фамилия">
+                            </div>
+                            <div class="form-row">
+                                <div class="input-item">
+                                    <input type="text" class="input" placeholder="Телефон">
+                                </div>
+                                <div class="input-item">
+                                    <input type="email" class="input" placeholder="Email">
+                                </div>
+                            </div>
+                            <button type="submit" class="button">ОПЛАТИТЬ</button>
+                            <p class="form-text">Нажимая кнопку «Оплатить» Вы соглашаетесь с политикой конфиденциальности</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
            
         <section class="contacts">
                 <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad8b50bd96e11e6da2607e1e51554aff0bb391da37633c0e4637747d50491d2cf&amp;source=constructor" width="100%" height="605" frameborder="0"></iframe>

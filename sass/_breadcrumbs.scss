@@ -4,6 +4,10 @@
     &-link {
         opacity: 0.5;
         display: inline-block;
+
+        &:not(:first-child) {
+            margin-left: 18px;
+        }
         
         &::after {
             content: '';

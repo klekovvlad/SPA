@@ -1,6 +1,6 @@
 main {
 
-    &:not(.homepage) {
+    &:not(.homepage, .area) {
         padding-top: calc(172px + 44px);
         @include mobile {
             padding-top: calc(52px + 62px);
@@ -11,5 +11,22 @@ main {
         }
     }
 
+    &.area {
+        .photos {
+            padding: 40px 0px;
+        }
 
+        .places {
+            padding-bottom: 140px;
+            h2 {
+                margin-bottom: 40px;
+            }
+        }
+
+        .bonuses {
+            @include mobile {
+                padding: 50px 0px;
+            }
+        }
+    }
 }
