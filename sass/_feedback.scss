@@ -48,6 +48,14 @@
 
         &-item {
             position: relative;
+            overflow: hidden;
+
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+
             &::before {
                 content: '';
                 position: absolute;
@@ -58,12 +66,14 @@
                 background: rgba($color: #26272B, $alpha: .5);
                 outline: 1px solid var(--color-border);
                 outline-offset: -10px;
+                z-index: 2;
             }
             img {
                 height: 255px;
                 width: 100%;
                 object-fit: cover;
                 object-position: center;
+                transition: transform .3s linear;
 
                 @include mobile {
                     height: 195px;
@@ -95,6 +105,11 @@
                 z-index: 3;
                 border-radius: 50%;
                 background: var(--color-gold) url('../img/icons/play.svg') no-repeat calc(50% + 2px) 50%;
+                transition: filter .5s linear;
+
+                &:hover {
+                    filter: brightness(.8);
+                }
 
                 @include mobile {
                     width: 55px;

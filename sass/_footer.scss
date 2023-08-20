@@ -50,12 +50,20 @@
 
     &-link {
         font-size: 14px;
+        transition: color .3s linear;
+        &:hover {
+            color: var(--color-border);
+        }
 
         &-title {
             font-size: 15px;
             text-transform: uppercase;
             @include fontTitle(700, 'normal');
             color: var(--color-border);
+            transition: opacity .3s linear;
+            &:hover {
+                opacity: 0.8;
+            }
         }
     }
 
@@ -80,6 +88,12 @@
             text-transform: uppercase;
             opacity: 0.5;
             font-size: 12px;
+        }
+
+        &-link {
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }

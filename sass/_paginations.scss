@@ -13,6 +13,7 @@
     .pagination {
         &-prev,
         &-next {
+            color: var(--color-text);
             font-size: 18px;
             text-transform: lowercase;
             background: transparent;
@@ -48,10 +49,12 @@
         }
 
         &-page {
+            color: var(--color-text);
             font-size: 18px;
             background: transparent;
 
             &.curent {
+                color: var(--color-text);
                 flex: 0 0 55px;
                 width: 55px;
                 height: 55px;

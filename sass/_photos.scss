@@ -43,4 +43,19 @@
     &-top {
         padding: 28px 0px 30px;
     }
+
+    &-top-item,
+    &-bottom-item {
+        overflow: hidden;
+
+        img {
+            transition: transform .5s linear;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
 }

@@ -25,3 +25,15 @@ body {
         padding: 0px 15px;
     }
 }
+
+span.star {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    mask: url('../img/icons/gold-star.svg') no-repeat center;
+    mask-size: contain;
+    background: var(--color-gold);
+    margin-left: 10px;
+    position: relative;
+    bottom: 2px;
+}

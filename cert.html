@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA Park</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css">
+
+</head>
+<body>
+    
+    <header class="header header-desktop">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="header-top">
+                    <a href="/" class="logo">
+                        <img src="img/logo.png" alt="logo">
+                    </a>
+                    <div class="header-adress">
+                        <div class="header-adress-item">
+                            <img src="img/icons/adress.svg" alt="adress" class="header-adress-icon">
+                            Сургут, ул. Проспект Мира, 25
+                        </div>
+                        <div class="header-adress-item">
+                            <img src="img/icons/clock.svg" alt="clock" class="header-adress-icon">
+                            Пн-Вс 11:00-23:00
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a class="social-link" href="">
+                            <img src="img/icons/tg-gold.svg" alt="">
+                        </a>
+                        <a class="social-link" href="">
+                            <img src="img/icons/vk-gold.svg" alt="">
+                        </a>
+                        <a class="social-link" href="">
+                            <img src="img/icons/ok-gold.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="social-links social-links__small">
+                        <a class="social-link" href="">
+                            <img src="img/icons/wa-color.svg" alt="">
+                        </a>
+                        <a class="social-link" href="">
+                            <img src="img/icons/viber.svg" alt="">
+                        </a>
+                        <a href="tel:+7346252-30-10" class="phone">+7(3462) 52-30-10</a>
+                    </div>
+                    
+                    <button class="button">Заказать звонок</button>
+                </div>
+            </div>
+
+            <nav class="header-nav">
+                <nav class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a class="menu-link" href="/">Главная</a>
+                        </li>
+                        <li class="menu-item menu-item__haschildren">
+                            <a class="menu-link" href="/">SPA пространства</a>
+                            <ul class="menu-children">
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">Индия</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">Индия</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">Индия</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">Индия</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item__haschildren">
+                            <a class="menu-link" href="/">Услуги массажа и спа</a>
+                            <ul class="menu-children">
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">дополнительные услуги</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">дополнительные услуги</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">дополнительные услуги</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">дополнительные услуги</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="/">Подарочные сертификаты</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="/">О нас</a>
+                        </li>
+                        <li class="menu-item menu-item__haschildren">
+                            <a class="menu-link" href="/">Акции и бонусы</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="/">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="/" class="cart-icon cart-icon-active" data-quantity="2"></a>
+            </nav>
+        </div>
+    </header>
+
+    <header class="header header-mobile">
+        <div class="container">
+            <div class="header-top">
+                <button class="header-burger-button">
+                    <span></span><span></span><span></span>
+                </button>
+                <a href="/" class="logo">
+                    <img src="img/logo.png" alt="logo">
+                </a>
+                <div class="header-top-contacts">
+                    <a href="tel:+7346252-30-10" class="phone">+7(3462) 52-30-10</a>
+                    <a href="/" class="cart-icon cart-icon-active" data-quantity="2"></a>
+                </div>
+            </div>
+            <div class="header-burger-menu">
+                <nav class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a class="menu-link" href="/">Главная</a>
+                        </li>
+                        <li class="menu-item menu-item__haschildren">
+                            <a class="menu-link" href="/">SPA пространства</a>
+                            <ul class="menu-children">
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">Индия</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">Индия</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">Индия</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">Индия</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item__haschildren">
+                            <a class="menu-link" href="/">Услуги массажа и спа</a>
+                            <ul class="menu-children">
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">дополнительные услуги</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">дополнительные услуги</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">дополнительные услуги</a>
+                                </li>
+                                <li class="menu-children-item">
+                                    <a href="#" class="menu-children-link">дополнительные услуги</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="/">Подарочные сертификаты</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="/">О нас</a>
+                        </li>
+                        <li class="menu-item menu-item__haschildren">
+                            <a class="menu-link" href="/">Акции и бонусы</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="/">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="+7(3462)523010" class="phone">+7(3462) 52-30-10</a>
+                <div class="social-links">
+                    <a class="social-link" href="">
+                        <img src="img/icons/wa-color.svg" alt="">
+                    </a>
+                    <a class="social-link" href="">
+                        <img src="img/icons/viber.svg" alt="">
+                    </a>
+                </div>
+                <button class="button">Заказать звонок</button>
+                <div class="header-adress">
+                    <div class="header-adress-item">
+                        <img src="img/icons/adress.svg" alt="adress" class="header-adress-icon">
+                        Сургут, ул. Проспект Мира, 25
+                    </div>
+                    <div class="header-adress-item">
+                        <img src="img/icons/clock.svg" alt="clock" class="header-adress-icon">
+                        Пн-Вс 11:00-23:00
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a class="social-link" href="">
+                        <img src="img/icons/tg-gold.svg" alt="">
+                    </a>
+                    <a class="social-link" href="">
+                        <img src="img/icons/vk-gold.svg" alt="">
+                    </a>
+                    <a class="social-link" href="">
+                        <img src="img/icons/ok-gold.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="cert">
+
+        <section class="hero" style="background-image: url('img/areas-bg.png');">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="/" class="breadcrumbs-link">Главная</a>
+                    <span class="breadcrumbs-curent">Подарочные сертификаты</span>
+                </div>
+
+                <h1 class="hero-title">Подарочные сертификаты на массаж и спа</h1>
+
+                <ul class="hero-advantages">
+                    <li class="hero-advantage">
+                        <img src="img/icons/adv-1.svg" alt="" class="hero-advantage-img">
+                        <div class="hero-advantage-text"><span class="gold italic">Выбирайте</span> сертификат от 3000 руб.</div>
+                    </li>
+                    <li class="hero-advantage">
+                        <img src="img/icons/adv-2.svg" alt="" class="hero-advantage-img">
+                        <div class="hero-advantage-text"><span class="gold italic">Сохраните</span> в тайне стоимость сюрприза</div>
+                    </li>
+                    <li class="hero-advantage">
+                        <img src="img/icons/adv-3.svg" alt="" class="hero-advantage-img">
+                        <div class="hero-advantage-text"><span class="gold italic">Платите</span> как удобнее картой или наличными</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cert-gift">
+            <div class="container">
+                <div class="cert-gift-wrapper">
+                    <h2><span class="italic gold">Дарите</span><span class="star"></span> сертификат по своим возможностям</h2>
+                    <div class="form form-cert">
+                        <form action="" class="form">
+                            <div class="form-col">
+                                <div class="form-row">
+                                    <div class="form-cert-title">Просто введите сумму от 1000 руб и добавьте в корзину</div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="input-item input-item__dark">
+                                        <div class="input-item-title">Укажите сумму</div>
+                                        <input type="text" class="input" placeholder="5000">
+                                        <div class="input-symb">₽</div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <button type="submit" class="button">Добавить в корзину</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <h2 class="services-title has-star"><span class="italic gold">СЕРТИФИКАТЫ</span> НА УСЛУГИ</h2>
+
+                <div class="services-wrapper">
+                    <div class="services-item">
+                        <div class="services-item-img">
+                            <img src="img/services/1.png" alt="">
+                            <button class="button-card">Узнать больше</button>
+                        </div>
+                        <h3 class="services-item-title">Пилинг</h3>
+                        <div class="services-item-info">
+                            <div class="services-item-price"><span class="value">2 500</span> ₽</div>
+                            <div class="services-item-time"><span class="value">60</span> мин</div>
+                            <button class="button-dark">В корзину</button>
+                        </div>
+                    </div>
+
+                    <div class="services-item">
+                        <div class="services-item-img">
+                            <img src="img/services/1.png" alt="">
+                            <button class="button-card">Узнать больше</button>
+                        </div>
+                        <h3 class="services-item-title">Пилинг</h3>
+                        <div class="services-item-info">
+                            <div class="services-item-price"><span class="value">2 500</span> ₽</div>
+                            <div class="services-item-time"><span class="value">60</span> мин</div>
+                            <button class="button-dark">В корзину</button>
+                        </div>
+                    </div>
+
+                    <div class="services-item">
+                        <div class="services-item-img">
+                            <img src="img/services/1.png" alt="">
+                            <button class="button-card">Узнать больше</button>
+                        </div>
+                        <h3 class="services-item-title">Пилинг</h3>
+                        <div class="services-item-info">
+                            <div class="services-item-price"><span class="value">2 500</span> ₽</div>
+                            <div class="services-item-time"><span class="value">60</span> мин</div>
+                            <button class="button-dark">В корзину</button>
+                        </div>
+                    </div>
+
+                    <div class="services-item">
+                        <div class="services-item-img">
+                            <img src="img/services/1.png" alt="">
+                            <button class="button-card">Узнать больше</button>
+                        </div>
+                        <h3 class="services-item-title">Пилинг</h3>
+                        <div class="services-item-info">
+                            <div class="services-item-price"><span class="value">2 500</span> ₽</div>
+                            <div class="services-item-time"><span class="value">60</span> мин</div>
+                            <button class="button-dark">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cert-use">
+            <div class="container">
+                <div class="cert-use-wrapper">
+                    <div class="cert-use-text">
+                        <h2><span class="italic gold">как пользоваться</span>  подарочным сертификатом</h2>
+                        <ul class="cert-use-list">
+                            <li class="cert-use-item">Воспользоваться сертификатом можно только при его наличии</li>
+                            <li class="cert-use-item">Воспользоваться услугами салона можно в течение 3-х месяцев с даты продажи подарочного сертификата и 6-ти месяцев при покупке абонемента.</li>
+                            <li class="cert-use-item">Подарочные сертификаты не возвращаются и не обналичиваются.</li>
+                            <li class="cert-use-item">Старайтесь не задерживаться: время опоздания на сеанс не компенсируется и может отразиться на продолжительности массажа или SPA</li>
+                            <li class="cert-use-item">Обратите внимание: условия использования сертификата не подходят под некоторые дисконтно-накопительные программы.</li>
+                        </ul>
+                    </div>
+                    <div class="cert-use-img">
+                        <img src="img/service-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+           
+        <section class="contacts">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad8b50bd96e11e6da2607e1e51554aff0bb391da37633c0e4637747d50491d2cf&amp;source=constructor" width="100%" height="605" frameborder="0"></iframe>
+                <div class="contacts-wrapper">
+                    <h2><span class="gold italic">Связь</span> с нами</h2>
+                    <p class="contacts-text">г. Сургут, ул. Проспект Мира, 25</p>
+                    <p class="contacts-text">ПН-ВС 11:00-23:00</p>
+                    <a href="tel:+7 (3462) 52-30-10" class="contacts-phone">+7 (3462) 52-30-10</a>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <img src="img/icons/tg-color.svg" alt="">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="img/icons/vk-color.svg" alt="">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="img/icons/ok-color.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer-nav">
+                <div class="footer-nav-col">
+                    <a href="#" class="footer-link-title">Главная</a>
+                </div>
+                <div class="footer-nav-col">
+                    <a href="#" class="footer-link-title">СПА пространства</a>
+                    <div class="footer-nav-list">
+                        <a href="#" class="footer-link">Индия</a>
+                        <a href="#" class="footer-link">Индия</a>
+                        <a href="#" class="footer-link">Индия</a>
+                        <a href="#" class="footer-link">Индия</a>
+                        <a href="#" class="footer-link">Индия</a>
+                        <a href="#" class="footer-link">Индия</a>
+                    </div>
+                </div>
+                <div class="footer-nav-col">
+                    <a href="#" class="footer-link-title">Услуги массажа и спа</a>
+                    <div class="footer-nav-list">
+                        <a href="#" class="footer-link">Спа программы</a>
+                        <a href="#" class="footer-link">Спа программы</a>
+                        <a href="#" class="footer-link">Спа программы</a>
+                    </div>
+                </div>
+                <div class="footer-nav-col">
+                    <a href="#" class="footer-link-title">подарочные сертификаты</a>
+                    <div class="footer-nav-list">
+                        <a href="#" class="footer-link">3000 руб.</a>
+                        <a href="#" class="footer-link">3000 руб.</a>
+                        <a href="#" class="footer-link">3000 руб.</a>
+                        <a href="#" class="footer-link">3000 руб.</a>
+                        <a href="#" class="footer-link">3000 руб.</a>
+                        <a href="#" class="footer-link">3000 руб.</a>
+                    </div>
+                </div>
+                <div class="footer-nav-col">
+                    <a href="#" class="footer-link-title">Акции и бонусы</a>
+                    <div class="footer-nav-list">
+                        <a href="#" class="footer-link">Акция 1+1</a>
+                        <a href="#" class="footer-link">Акция 1+1</a>
+                        <a href="#" class="footer-link">Акция 1+1</a>
+                    </div>
+                </div>
+                <div class="footer-nav-col">
+                    <a href="#" class="footer-link-title">О НАС</a>
+                </div>
+                <div class="footer-nav-col">
+                    <a href="#" class="footer-link-title">Контакты</a>
+                </div>
+            </nav>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">© ООО «SPA PARK», 2014-2017</div>
+                <a href="#" class="footer-bottom-link">политика обработки персональных данных</a>
+                <a href="#" class="footer-bottom-link">Публичная оферта об оказании услуг</a>
+            </div>
+        </div>
+    </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

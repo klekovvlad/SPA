@@ -1,6 +1,6 @@
 main {
 
-    &:not(.homepage, .area) {
+    &:not(.homepage, .area, .cert) {
         padding-top: calc(172px + 44px);
         @include mobile {
             padding-top: calc(52px + 62px);
@@ -26,6 +26,21 @@ main {
         .bonuses {
             @include mobile {
                 padding: 50px 0px;
+            }
+        }
+    }
+
+    &.cert {
+        .services {
+            padding: 100px 0px;
+            background: #FFFAF2;
+
+            @include mobile {
+                padding: 70px 0px;
+            }
+
+            &-wrapper {
+                padding: 40px 0px 0px;
             }
         }
     }

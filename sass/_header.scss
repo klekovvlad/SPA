@@ -70,6 +70,12 @@
                     }
             
                     &-item {
+                        .menu-link {
+                            transition: color .5s linear;
+                            &:hover {
+                                color: var(--color-border);
+                            }
+                        }
                         &__haschildren {
                             position: relative;
             
@@ -92,6 +98,7 @@
                                     background-size: contain;
                                     position: relative;
                                     top: -3px;
+                                    transition: transform .3s linear;
             
                                     @include tablet {
                                         width: 10px;
@@ -104,7 +111,7 @@
                                 .menu-link {
                                     color: var(--color-border);
                                     &::after {
-                                        transform: rotate(180deg);
+                                        transform: rotate(-180deg);
                                     }
                                 }
             
@@ -138,6 +145,11 @@
                                     white-space: nowrap;
                                     text-transform: uppercase;
                                     color: var(--color-text);
+                                    transition: color .3s linear;
+
+                                    &:hover {
+                                        color: var(--color-gold);
+                                    }
                                 }
                             }
                         }
@@ -349,6 +361,7 @@
                             font-size: 34px;
                             font-weight: 400;
                             padding: 20px 0px 12px;
+
                         }
 
                         .button {
@@ -462,6 +475,11 @@
         font-size: 17px;
         font-weight: 600;
         white-space: nowrap;
+        transition: color .3s linear;
+
+        &:hover {
+            color: var(--color-border);
+        }
 
         @include tablet {
             font-size: 14px;

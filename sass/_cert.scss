@@ -1,0 +1,108 @@
+.cert {
+    &-gift {
+        padding: 62px 0px 126px;
+
+        @include mobile {
+            padding: 16px 0px 90px;
+        }
+
+        &-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            @include tablet {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            @include mobile {
+                gap: 20px;
+            }
+
+            h2 {
+                text-align: left;
+                max-width: calc(100% - 160px);
+                
+            }
+        }
+    }
+
+    &-use {
+        padding: 120px 0px 190px;
+
+        @include mobile {
+            padding: 50px 0px 120px;
+        }
+
+        &-wrapper {
+            display: grid;
+            align-items: start;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 100px;
+
+            @include mobile {
+                grid-template-columns: 1fr;
+                grid-gap: 30px;
+            }
+        }
+
+        &-img {
+            margin-left: auto;
+            padding: 10px;
+            border-radius: 50%;
+            border: 1px solid var(--color-border);
+
+            img {
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 50%;
+            }
+        }
+
+        &-text {
+            h2 {
+                text-align: left;
+                margin: 0px 0px 40px;
+            }
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            gap: 30px;
+
+            @include mobile {
+                gap: 15px;
+            }
+        }
+
+        &-item {
+            font-size: 14px;
+            line-height: 1.7;
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            gap: 35px;
+
+            @include mobile {
+                gap: 25px;
+            }
+
+            &::before {
+                flex: 0 0 25px;
+                content: '';
+                width: 25px;
+                height: 25px;
+                background: url('../img/icons/list-icon.svg') no-repeat center;
+                background-size: contain;
+                display: inline-block;
+            }
+        }
+
+
+    }
+}

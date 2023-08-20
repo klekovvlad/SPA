@@ -4,6 +4,7 @@
     align-items: start;
     justify-content: start;
     gap: 15px;
+    position: relative;
 
     @include mobile {
         flex: 0 0 100%;
@@ -12,6 +13,83 @@
     &-title {
         font-size: 14px;
         font-weight: 500;
+    }
+
+    &.input-item__error {
+        .input {
+            border: 1px solid #D14141;
+        }
+
+        &::after {
+            content: 'Пожалуйста, заполните это поле';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font-size: 14px;
+            color: #D14141;
+            transform: translate(0, calc(100%));
+        }
+    }
+
+    &.input-item__buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        gap: 30px;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .input {
+            cursor: pointer;
+            color: var(--color-border);
+            flex: 0 0 calc((100% - 60px) / 3);
+
+            @include mobile {
+                flex: 0 0 100%;
+            }
+        }
+
+        input[type=radio]:checked + label.input {
+            color: #fff;
+            background: var(--gradient-button);
+        }
+    }
+
+    &.input-item__list {
+
+        label {
+            text-transform: uppercase;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 20px;
+
+            @include mobile {
+                font-size: 12px;
+            }
+
+            &::before {
+                content: '';
+                flex: 0 0 30px;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: 1px solid var(--color-gold);
+            }
+        }
+
+        input[type=radio]:checked + label {
+            &::before {
+                background: var(--color-gold) url('../img/icons/check.svg') no-repeat center;
+                background-size: 50%;
+            }
+        }
     }
 
     .input {
@@ -45,11 +123,22 @@
             justify-content: start;
             height: 50px;
         }
+
+        &-symb {
+            pointer-events: none;
+            color: var(--color-border);
+            opacity: 0.7;
+            position: absolute;
+            bottom: calc(64px / 2);
+            right: 20px;
+            transform: translate(0, 50%);
+        }
     }
 
-    input[type=date].input {
+    input[type=date] {
         min-width: 100%;
         min-height: 64px;
+        -webkit-appearance: none; 
     }
 
     textarea.input {

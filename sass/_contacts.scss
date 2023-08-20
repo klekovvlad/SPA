@@ -95,10 +95,16 @@
         white-space: nowrap;
         font-size: 54px;
         margin: 4px 0px 26px;
+        transition: color .3s linear;
+
+        @media (min-width: 1200px) {
+            &:hover {
+                color: var(--color-border);
+            }
+        }
 
         @include mobile {
             font-size: 30px;
-
             margin: 20px 0px 4px;
         }
     }
