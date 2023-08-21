@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPA Park</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
-
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=49618d3f-5aa6-481b-a340-d90d9762907f&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
     
@@ -15,7 +15,7 @@
             <div class="header-wrapper">
                 <div class="header-top">
                     <a href="/" class="logo">
-                        <img src="img/logo.png" alt="logo">
+                        <img src="img/logo.svg" alt="logo">
                     </a>
                     <div class="header-adress">
                         <div class="header-adress-item">
@@ -118,7 +118,7 @@
                     <span></span><span></span><span></span>
                 </button>
                 <a href="/" class="logo">
-                    <img src="img/logo.png" alt="logo">
+                    <img src="img/logo.svg" alt="logo">
                 </a>
                 <div class="header-top-contacts">
                     <a href="tel:+7346252-30-10" class="phone">+7(3462) 52-30-10</a>
@@ -237,25 +237,27 @@
 
             <div class="photos-slider photos-bottom swiper">
                 <div class="swiper-wrapper">
-                    <a href="#" class="photos-bottom-item swiper-slide">
-                        <img src="img/gallery/1.png" alt="">
+                    <a data-fslightbox href="img/gallery/1.png" class="photos-bottom-item swiper-slide">
+                        <img loading="lazy" src="img/gallery/1.png" alt="">
                     </a>
-                    <a href="#" class="photos-bottom-item swiper-slide">
-                        <img src="img/gallery/1.png" alt="">
+                    <a data-fslightbox href="img/gallery/1.png" class="photos-bottom-item swiper-slide">
+                        <img loading="lazy" src="img/gallery/1.png" alt="">
                     </a>
-                    <a href="#" class="photos-bottom-item swiper-slide">
-                        <img src="img/gallery/1.png" alt="">
+                    <a data-fslightbox href="img/gallery/1.png" class="photos-bottom-item swiper-slide">
+                        <img loading="lazy" src="img/gallery/1.png" alt="">
                     </a>
-                    <a href="#" class="photos-bottom-item swiper-slide">
-                        <img src="img/gallery/1.png" alt="">
+                    <a data-fslightbox href="img/gallery/1.png" class="photos-bottom-item swiper-slide">
+                        <img loading="lazy" src="img/gallery/1.png" alt="">
                     </a>
-                    <a href="#" class="photos-bottom-item swiper-slide">
-                        <img src="img/gallery/1.png" alt="">
+                    <a data-fslightbox href="img/gallery/1.png" class="photos-bottom-item swiper-slide">
+                        <img loading="lazy" src="img/gallery/1.png" alt="">
                     </a>
-                    <a href="#" class="photos-bottom-item swiper-slide">
-                        <img src="img/gallery/1.png" alt="">
+                    <a data-fslightbox href="img/gallery/1.png" class="photos-bottom-item swiper-slide">
+                        <img loading="lazy" src="img/gallery/1.png" alt="">
                     </a>
                 </div>
+                <button class="slider-photo slider-photo-prev"></button>
+                <button class="slider-photo slider-photo-next"></button>
             </div>
         </section>
 
@@ -482,11 +484,11 @@
                         <div class="form-col">
                             <div class="input-item">
                                 <div class="input-item-title">Укажите ваши контактные данные</div>
-                                <input type="text" class="input" placeholder="Имя фамилия">
+                                <input name="name" type="text" class="input" placeholder="Имя фамилия">
                             </div>
                             <div class="form-row">
                                 <div class="input-item">
-                                    <input type="text" class="input" placeholder="Телефон">
+                                    <input type="tel" class="input" placeholder="Телефон">
                                 </div>
                                 <div class="input-item">
                                     <input type="email" class="input" placeholder="Email">
@@ -549,7 +551,7 @@
         </section>
            
         <section class="contacts">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad8b50bd96e11e6da2607e1e51554aff0bb391da37633c0e4637747d50491d2cf&amp;source=constructor" width="100%" height="605" frameborder="0"></iframe>
+                <div id="map"></div>
                 <div class="contacts-wrapper">
                     <h2><span class="gold italic">Связь</span> с нами</h2>
                     <p class="contacts-text">г. Сургут, ул. Проспект Мира, 25</p>
@@ -629,8 +631,9 @@
             </div>
         </div>
     </footer>
-
-        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="js/imask.js"></script>
+        <script src="js/fslightbox.js"></script>
+        <script src="js/swiper.min.js"></script>
         <script src="js/app.js"></script>
     </body>
 </html>

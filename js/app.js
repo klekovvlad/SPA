@@ -1,3 +1,5 @@
+const body = document.querySelector('body');
+
 //Burger Menu
 
 const headerMobile = document.querySelector('.header-mobile');
@@ -107,6 +109,10 @@ if(PhotosSliders.length > 0) {
                         slidesPerView: 5,
                         centeredSlides: false,
                     }
+                },
+                navigation: {
+                    prevEl: '.slider-photo-prev',
+                    nextEl: '.slider-photo-next'
                 }
             })
         }
@@ -231,9 +237,10 @@ if(quantityInputs.length > 0) {
         }
         inputWrapper.onclick = (e) => {
             if(e.target === buttonMinus) {
-                if(input.value > 0) {
+                if(Number(input.value) > 0) {
                     input.value = Number(input.value - 1)
-                }else {
+                }
+                if(input.value == 0) {
                     buttonMinus.classList.add('disabled')
                 }
             }
@@ -243,4 +250,269 @@ if(quantityInputs.length > 0) {
             }
         }
     })
+}
+
+//Я.Карты
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [61.255872, 73.396141],
+            zoom: 15,
+            controls: []
+        }),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark([61.260481, 73.398216], {
+            hintContent: 'Г. СУРГУТ, УЛ. ПРОСПЕКТ МИРА, 25',
+            balloonContent: 'Spa Park'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/icons/map.svg',
+            // Размеры метки.
+            iconImageSize: [43, 43],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-20, -20]
+        })
+
+    myMap.geoObjects.add(myPlacemark)
+});
+
+//Маска для телефона
+const phones = document.querySelectorAll('input[type=tel]');
+phones.forEach(phone => {
+    IMask(phone, {
+        mask: '+{7}(000)000-00-00'
+    })
+})
+
+//Валидация форм
+
+const forms = document.querySelectorAll('form');
+const errors = {
+    fill: 'Пожалуйста, заполните это поле',
+    novalid: 'Заполните поле корректно'
+}
+
+const regs = {
+    email: /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i
+}
+
+const messages = {
+    success: {
+        title: 'Спасибо',
+        message: 'Мы скоро свяжемся с вами'
+    },
+    error: {
+        title: 'Ошибка',
+        message: 'Попробуйте отправить форму еще раз'
+    }
+}
+
+if(forms.length > 0) {
+    forms.forEach(form => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = form.querySelector('input[name=name]');
+            const phone = form.querySelector('input[type=tel]');
+            const privacy = form.querySelector('input#privacy');
+            const email = form.querySelector('input[type=email]');
+            let valid = true;
+
+            if(name) {
+                if(name.value.length < 2) {
+                    addInputError(name, errors.fill)
+                    valid = false;
+                }else if(name.value.length > 30) {
+                    addInputError(name, errors.novalid)
+                    valid = false;
+                }else {
+                    valid = true;
+                }
+                removeInputError(name);
+            }
+            if(phone) {
+                if(phone.value.length < 16) {
+                    addInputError(phone, errors.fill)
+                    valid = false
+                }else{
+                    valid = true
+                }
+                removeInputError(phone)
+            }
+            if(privacy) {
+                if(!privacy.checked) {
+                    addInputError(privacy, errors.fill)
+                    valid = false
+                }else valid = true;
+                removeInputError(privacy)
+            }
+            if(email) {
+                if(!regs.email.test(email.value)) {
+                    addInputError(email, errors.novalid)
+                    valid = false;
+                }else {
+                    valid = true
+                }
+                removeInputError(email);
+            }
+
+            if(valid) {
+                sendForm(form);
+            }
+        })
+    })
+}
+
+const addInputError = (target, error) => {
+    target.parentElement.classList.add('input-item__error');
+    target.parentElement.dataset.error = error;
+}
+
+const removeInputError = (target) => {
+    target.oninput = () => {
+        if(target.parentElement.classList.contains('input-item__error')) {
+            target.parentElement.classList.remove('input-item__error')
+        }
+    }
+}
+
+const sendForm = (form) => {
+    fetch('/send.php', {
+        method: 'POST',
+        body: new FormData(form)
+    })
+    .then(res => res.json())
+    .then(res => {
+        let message = {}
+        if(res.error === false) {
+            message = messages.success
+        }else {
+            message = messages.error
+        }
+        const popup = document.createElement('div');
+        popup.className = 'popup popup-message';
+        const popupMessage = `
+            <div class="popup-body">
+                <button class="popup-close"></button>
+                <h3 class="popup-title">${message.title}</h3>
+                <p class="popup-desc">${message.message}</p>
+            </div>
+        `
+        popup.insertAdjacentHTML('afterbegin', popupMessage);
+        body.append(popup)
+        setTimeout(() => {
+            popup.classList.add('open')
+        }, 100)
+        popupClose(popup)
+    })
+}
+
+const popupClose = (popup) => {
+    popup.onclick = (e) => {
+        if(e.target === popup || e.target.classList.contains('popup-close')) {
+            popup.classList.remove('open')
+            if(popup.classList.contains('popup-message') || popup.classList.contains('popup-video')) {
+                setTimeout(() => {
+                    popup.parentElement.removeChild(popup)
+                }, 100)
+            }
+        }
+    }
+}
+
+//Видео поп-ап
+
+const videoFeedbacks = document.querySelectorAll('.feedback-video-item')
+
+if(videoFeedbacks.length > 0) {
+    videoFeedbacks.forEach(video => {
+        video.onclick = (e) => {
+            const popup = document.createElement('div');
+            popup.className = 'popup popup-video'
+            const popupBody = `
+            <div class="popup-body">
+                <button class="popup-close"></button>
+                <iframe src="${video.dataset.url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            `
+            popup.insertAdjacentHTML('afterbegin', popupBody);
+            body.append(popup)
+            setTimeout(() => {
+                popup.classList.add('open')
+            }, 100)
+            popupClose(popup)
+        }
+    })
+}
+
+//Поп-ап сервиса
+
+const serviceItems = document.querySelectorAll('.services-item');
+const servicePopup = document.querySelector('.popup-more')
+
+serviceItems.forEach(service => {
+    service.onclick = (e) => {
+        if(e.target.classList.contains('button-card')) {
+            e.preventDefault();
+            servicePopup.querySelector('.popup-title').textContent = service.querySelector('.services-item-title').textContent
+            servicePopup.querySelector('.popup-desc').textContent = service.querySelector('.services-item-desc').textContent
+            servicePopup.querySelector('.popup-img').src = service.querySelector('.services-item-img > img').src
+            servicePopup.querySelector('.popup-text-time').innerHTML = service.querySelector('.services-item-time').innerHTML
+            servicePopup.querySelector('.popup-text-price').innerHTML = service.querySelector('.services-item-price').innerHTML
+            servicePopup.classList.add('open')
+            popupClose(servicePopup); 
+        }
+    }
+})
+
+//Dropdown input
+const formCert = document.querySelector('.form-cert');
+
+const dropdownInputs = document.querySelectorAll('.input-item__dropdown')
+
+if(dropdownInputs.length > 0) {
+    dropdownInputs.forEach(dropdown => {
+        const input = dropdown.querySelector('.input');
+
+        input.oninput = () => input.value = ''
+
+        dropdown.onclick = (e) => {
+            if(dropdown.classList.contains('open')) {
+                dropdown.classList.remove('open');
+            }else{
+                dropdown.classList.add('open');
+            }
+
+            if(e.target.classList.contains('dropdown-item')) {
+                input.value = e.target.textContent
+            }
+        }
+    })
+}
+
+if(formCert) {
+    const popupCert = document.querySelector('.popup-cert')
+    const popupSumm = formCert.querySelector('input.input')
+
+    formCert.onclick = (e) => {
+        if(e.target.classList.contains('button')) {
+            if(popupCert) {
+                popupCert.classList.add('open')
+                const summInputs = document.querySelectorAll('input[name=summ]')
+                if(summInputs.length > 0) {
+                    summInputs.forEach(input => {
+                        if(input.value == popupSumm.value) {
+                            input.checked = true;
+                        }
+                    })
+                }
+                popupClose(popupCert);
+            }
+        }
+
+    }
 }

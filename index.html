@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPA Park</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
-
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=49618d3f-5aa6-481b-a340-d90d9762907f&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
     
@@ -15,7 +15,7 @@
             <div class="header-wrapper">
                 <div class="header-top">
                     <a href="/" class="logo">
-                        <img src="img/logo.png" alt="logo">
+                        <img src="img/logo.svg" alt="logo">
                     </a>
                     <div class="header-adress">
                         <div class="header-adress-item">
@@ -118,7 +118,7 @@
                     <span></span><span></span><span></span>
                 </button>
                 <a href="/" class="logo">
-                    <img src="img/logo.png" alt="logo">
+                    <img src="img/logo.svg" alt="logo">
                 </a>
                 <div class="header-top-contacts">
                     <a href="tel:+7346252-30-10" class="phone">+7(3462) 52-30-10</a>
@@ -236,7 +236,7 @@
                                 <p class="surtificate-slide-subtitle">Универсальный подарок для всех.</p>
                                 <a href="#" class="button-border button-border__white">Подробнее</a>
                             </div>
-                            <img src="img/surtificate.png" alt="сертификат" class="surtificate-slide-img">
+                            <img loading="lazy" src="img/surtificate.png" alt="сертификат" class="surtificate-slide-img">
                         </div>
                         <div class="surtificate-slide swiper-slide">
                             <div class="surtificate-slide-text">
@@ -244,7 +244,7 @@
                                 <p class="surtificate-slide-subtitle">Универсальный подарок для всех.</p>
                                 <a href="#" class="button-border button-border__white">Подробнее</a>
                             </div>
-                            <img src="img/surtificate.png" alt="сертификат" class="surtificate-slide-img">
+                            <img loading="lazy" src="img/surtificate.png" alt="сертификат" class="surtificate-slide-img">
                         </div>
                         <div class="surtificate-slide swiper-slide">
                             <div class="surtificate-slide-text">
@@ -252,7 +252,7 @@
                                 <p class="surtificate-slide-subtitle">Универсальный подарок для всех.</p>
                                 <a href="#" class="button-border button-border__white">Подробнее</a>
                             </div>
-                            <img src="img/surtificate.png" alt="сертификат" class="surtificate-slide-img">
+                            <img loading="lazy" src="img/surtificate.png" alt="сертификат" class="surtificate-slide-img">
                         </div>
                     </div>
                     <div class="surtificate-pagination"></div>
@@ -265,37 +265,37 @@
                 <h2 class="places-title has-star"><span class="italic gold">СПА</span>-пространства</h2>
                 <div class="places-wrapper">
                     <a href="#" class="places-item">
-                        <img src="img/places/1.png" alt="" class="places-item-img">
+                        <img loading="lazy" src="img/places/1.png" alt="" class="places-item-img">
                         <div class="places-item-guest">до 2 гостей</div>
                         <h3 class="places-item-title">ИНДИЯ</h3>
                         <button class="button-card">Узнать больше</button>
                     </a>
                     <a href="#" class="places-item">
-                        <img src="img/places/1.png" alt="" class="places-item-img">
+                        <img loading="lazy" src="img/places/1.png" alt="" class="places-item-img">
                         <div class="places-item-guest">до 2 гостей</div>
                         <h3 class="places-item-title">ИНДИЯ</h3>
                         <button class="button-card">Узнать больше</button>
                     </a>
                     <a href="#" class="places-item">
-                        <img src="img/places/1.png" alt="" class="places-item-img">
+                        <img loading="lazy" src="img/places/1.png" alt="" class="places-item-img">
                         <div class="places-item-guest">до 2 гостей</div>
                         <h3 class="places-item-title">ИНДИЯ</h3>
                         <button class="button-card">Узнать больше</button>
                     </a>
                     <a href="#" class="places-item">
-                        <img src="img/places/1.png" alt="" class="places-item-img">
+                        <img loading="lazy" src="img/places/1.png" alt="" class="places-item-img">
                         <div class="places-item-guest">до 2 гостей</div>
                         <h3 class="places-item-title">ИНДИЯ</h3>
                         <button class="button-card">Узнать больше</button>
                     </a>
                     <a href="#" class="places-item">
-                        <img src="img/places/1.png" alt="" class="places-item-img">
+                        <img loading="lazy" src="img/places/1.png" alt="" class="places-item-img">
                         <div class="places-item-guest">до 2 гостей</div>
                         <h3 class="places-item-title">ИНДИЯ</h3>
                         <button class="button-card">Узнать больше</button>
                     </a>
                     <a href="#" class="places-item">
-                        <img src="img/places/1.png" alt="" class="places-item-img">
+                        <img loading="lazy" src="img/places/1.png" alt="" class="places-item-img">
                         <div class="places-item-guest">до 2 гостей</div>
                         <h3 class="places-item-title">ИНДИЯ</h3>
                         <button class="button-card">Узнать больше</button>
@@ -329,110 +329,119 @@
                 </nav>
 
                 <div class="services-wrapper">
-                    <div class="services-item">
+                    <a href="" class="services-item">
                         <div class="services-item-img">
                             <img src="img/services/1.png" alt="">
                             <button class="button-card">Узнать больше</button>
                         </div>
                         <h3 class="services-item-title">Пилинг</h3>
+                        <p class="services-item-desc">Уникальная особенность этого номера - возможность посетить самый настоящий хамам с удивительным по своим ощущениям мыльным массажем. Отдых на горячем мраморе в облаке невесомой мыльной пены, пилинг и мыльный массаж очистят душу и тело, придадут сил и вернут хорошее настроение. </p>
                         <div class="services-item-info">
                             <div class="services-item-price"><span class="value">2 500</span> ₽</div>
                             <div class="services-item-time"><span class="value">60</span> мин</div>
                             <button class="button-dark">В корзину</button>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="services-item">
+                    <a href="" class="services-item">
                         <div class="services-item-img">
                             <img src="img/services/1.png" alt="">
                             <button class="button-card">Узнать больше</button>
                         </div>
                         <h3 class="services-item-title">Пилинг</h3>
+                        <p class="services-item-desc">Уникальная особенность этого номера - возможность посетить самый настоящий хамам с удивительным по своим ощущениям мыльным массажем. Отдых на горячем мраморе в облаке невесомой мыльной пены, пилинг и мыльный массаж очистят душу и тело, придадут сил и вернут хорошее настроение. </p>
                         <div class="services-item-info">
                             <div class="services-item-price"><span class="value">2 500</span> ₽</div>
                             <div class="services-item-time"><span class="value">60</span> мин</div>
                             <button class="button-dark">В корзину</button>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="services-item">
+                    <a href="" class="services-item">
                         <div class="services-item-img">
                             <img src="img/services/1.png" alt="">
                             <button class="button-card">Узнать больше</button>
                         </div>
                         <h3 class="services-item-title">Пилинг</h3>
+                        <p class="services-item-desc">Уникальная особенность этого номера - возможность посетить самый настоящий хамам с удивительным по своим ощущениям мыльным массажем. Отдых на горячем мраморе в облаке невесомой мыльной пены, пилинг и мыльный массаж очистят душу и тело, придадут сил и вернут хорошее настроение. </p>
                         <div class="services-item-info">
                             <div class="services-item-price"><span class="value">2 500</span> ₽</div>
                             <div class="services-item-time"><span class="value">60</span> мин</div>
                             <button class="button-dark">В корзину</button>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="services-item">
+                    <a href="" class="services-item">
                         <div class="services-item-img">
                             <img src="img/services/1.png" alt="">
                             <button class="button-card">Узнать больше</button>
                         </div>
                         <h3 class="services-item-title">Пилинг</h3>
+                        <p class="services-item-desc">Уникальная особенность этого номера - возможность посетить самый настоящий хамам с удивительным по своим ощущениям мыльным массажем. Отдых на горячем мраморе в облаке невесомой мыльной пены, пилинг и мыльный массаж очистят душу и тело, придадут сил и вернут хорошее настроение. </p>
                         <div class="services-item-info">
                             <div class="services-item-price"><span class="value">2 500</span> ₽</div>
                             <div class="services-item-time"><span class="value">60</span> мин</div>
                             <button class="button-dark">В корзину</button>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="services-item">
+                    <a href="" class="services-item">
                         <div class="services-item-img">
                             <img src="img/services/1.png" alt="">
                             <button class="button-card">Узнать больше</button>
                         </div>
                         <h3 class="services-item-title">Пилинг</h3>
+                        <p class="services-item-desc">Уникальная особенность этого номера - возможность посетить самый настоящий хамам с удивительным по своим ощущениям мыльным массажем. Отдых на горячем мраморе в облаке невесомой мыльной пены, пилинг и мыльный массаж очистят душу и тело, придадут сил и вернут хорошее настроение. </p>
                         <div class="services-item-info">
                             <div class="services-item-price"><span class="value">2 500</span> ₽</div>
                             <div class="services-item-time"><span class="value">60</span> мин</div>
                             <button class="button-dark">В корзину</button>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="services-item">
+                    <a href="" class="services-item">
                         <div class="services-item-img">
                             <img src="img/services/1.png" alt="">
                             <button class="button-card">Узнать больше</button>
                         </div>
                         <h3 class="services-item-title">Пилинг</h3>
+                        <p class="services-item-desc">Уникальная особенность этого номера - возможность посетить самый настоящий хамам с удивительным по своим ощущениям мыльным массажем. Отдых на горячем мраморе в облаке невесомой мыльной пены, пилинг и мыльный массаж очистят душу и тело, придадут сил и вернут хорошее настроение. </p>
                         <div class="services-item-info">
                             <div class="services-item-price"><span class="value">2 500</span> ₽</div>
                             <div class="services-item-time"><span class="value">60</span> мин</div>
                             <button class="button-dark">В корзину</button>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="services-item">
+                    <a href="" class="services-item">
                         <div class="services-item-img">
                             <img src="img/services/1.png" alt="">
                             <button class="button-card">Узнать больше</button>
                         </div>
                         <h3 class="services-item-title">Пилинг</h3>
+                        <p class="services-item-desc">Уникальная особенность этого номера - возможность посетить самый настоящий хамам с удивительным по своим ощущениям мыльным массажем. Отдых на горячем мраморе в облаке невесомой мыльной пены, пилинг и мыльный массаж очистят душу и тело, придадут сил и вернут хорошее настроение. </p>
                         <div class="services-item-info">
                             <div class="services-item-price"><span class="value">2 500</span> ₽</div>
                             <div class="services-item-time"><span class="value">60</span> мин</div>
                             <button class="button-dark">В корзину</button>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="services-item">
+                    <a href="" class="services-item">
                         <div class="services-item-img">
                             <img src="img/services/1.png" alt="">
                             <button class="button-card">Узнать больше</button>
                         </div>
                         <h3 class="services-item-title">Пилинг</h3>
+                        <p class="services-item-desc">Уникальная особенность этого номера - возможность посетить самый настоящий хамам с удивительным по своим ощущениям мыльным массажем. Отдых на горячем мраморе в облаке невесомой мыльной пены, пилинг и мыльный массаж очистят душу и тело, придадут сил и вернут хорошее настроение. </p>
                         <div class="services-item-info">
                             <div class="services-item-price"><span class="value">2 500</span> ₽</div>
                             <div class="services-item-time"><span class="value">60</span> мин</div>
                             <button class="button-dark">В корзину</button>
                         </div>
-                    </div>
+                    </a>
                 </div>
+                
 
                 <a href="#" class="button-border button-border__dark">Подробнее</a>
             </div>
@@ -445,7 +454,7 @@
                     <div class="swiper-wrapper">
                         <div class="gifts-slide swiper-slide">
                             <div class="gifts-slide-img">
-                                <img src="img/gifts/1.png" alt="">
+                                <img loading="lazy" src="img/gifts/1.png" alt="">
                             </div>
                             <h3 class="gifts-title">Сертификат в СПА</h3>
                             <div class="gifts-price"><span class="value">3 000</span> ₽</div>
@@ -453,7 +462,7 @@
                         </div>
                         <div class="gifts-slide swiper-slide">
                             <div class="gifts-slide-img">
-                                <img src="img/gifts/1.png" alt="">
+                                <img loading="lazy" src="img/gifts/1.png" alt="">
                             </div>
                             <h3 class="gifts-title">Сертификат в СПА</h3>
                             <div class="gifts-price"><span class="value">3 000</span> ₽</div>
@@ -461,7 +470,7 @@
                         </div>
                         <div class="gifts-slide swiper-slide">
                             <div class="gifts-slide-img">
-                                <img src="img/gifts/1.png" alt="">
+                                <img loading="lazy" src="img/gifts/1.png" alt="">
                             </div>
                             <h3 class="gifts-title">Сертификат в СПА</h3>
                             <div class="gifts-price"><span class="value">3 000</span> ₽</div>
@@ -512,37 +521,37 @@
 
             <div class="photos-slider photos-top swiper">
                 <div class="swiper-wrapper">
-                    <a href="#" class="photos-top-item swiper-slide">
-                        <img src="img/gallery/1.png" alt="">
+                    <a data-fslightbox href="img/gallery/1.png" class="photos-top-item swiper-slide">
+                        <img loading="lazy" src="img/gallery/1.png" alt="">
                     </a>
-                    <a href="#" class="photos-top-item swiper-slide">
-                        <img src="img/gallery/1.png" alt="">
+                    <a data-fslightbox href="img/gallery/1.png" class="photos-top-item swiper-slide">
+                        <img loading="lazy" src="img/gallery/1.png" alt="">
                     </a>
-                    <a href="#" class="photos-top-item swiper-slide">
-                        <img src="img/gallery/1.png" alt="">
+                    <a data-fslightbox href="img/gallery/1.png" class="photos-top-item swiper-slide">
+                        <img loading="lazy" src="img/gallery/1.png" alt="">
                     </a>
                 </div>
             </div>
 
             <div class="photos-slider photos-bottom swiper">
                 <div class="swiper-wrapper">
-                    <a href="#" class="photos-bottom-item swiper-slide">
-                        <img src="img/gallery/1.png" alt="">
+                    <a data-fslightbox href="img/gallery/1.png" class="photos-bottom-item swiper-slide">
+                        <img loading="lazy" src="img/gallery/1.png" alt="">
                     </a>
-                    <a href="#" class="photos-bottom-item swiper-slide">
-                        <img src="img/gallery/1.png" alt="">
+                    <a data-fslightbox href="img/gallery/1.png" class="photos-bottom-item swiper-slide">
+                        <img loading="lazy" src="img/gallery/1.png" alt="">
                     </a>
-                    <a href="#" class="photos-bottom-item swiper-slide">
-                        <img src="img/gallery/1.png" alt="">
+                    <a data-fslightbox href="img/gallery/1.png" class="photos-bottom-item swiper-slide">
+                        <img loading="lazy" src="img/gallery/1.png" alt="">
                     </a>
-                    <a href="#" class="photos-bottom-item swiper-slide">
-                        <img src="img/gallery/1.png" alt="">
+                    <a data-fslightbox href="img/gallery/1.png" class="photos-bottom-item swiper-slide">
+                        <img loading="lazy" src="img/gallery/1.png" alt="">
                     </a>
-                    <a href="#" class="photos-bottom-item swiper-slide">
-                        <img src="img/gallery/1.png" alt="">
+                    <a data-fslightbox href="img/gallery/1.png" class="photos-bottom-item swiper-slide">
+                        <img loading="lazy" src="img/gallery/1.png" alt="">
                     </a>
-                    <a href="#" class="photos-bottom-item swiper-slide">
-                        <img src="img/gallery/1.png" alt="">
+                    <a data-fslightbox href="img/gallery/1.png" class="photos-bottom-item swiper-slide">
+                        <img loading="lazy" src="img/gallery/1.png" alt="">
                     </a>
                 </div>
             </div>
@@ -553,22 +562,22 @@
                 <h2 class="has-star"><span class="gold italic">ОТЗЫВЫ</span> НАШИХ ГОСТЕЙ</h2>
                 <div class="feedback-video swiper">
                     <div class="swiper-wrapper">
-                        <div class="feedback-video-item swiper-slide">
+                        <div class="feedback-video-item swiper-slide" data-url="https://www.youtube.com/embed/teojy6WjlKA">
                             <img src="img/video-bg.png" alt="">
                             <h3 class="feedback-video-item-title">«Полный релакс»</h3>
                             <button class="feedback-video-item-play"></button>
                         </div>
-                        <div class="feedback-video-item swiper-slide">
+                        <div class="feedback-video-item swiper-slide" data-url="https://www.youtube.com/embed/teojy6WjlKA"> 
                             <img src="img/video-bg.png" alt="">
                             <h3 class="feedback-video-item-title">«Полный релакс»</h3>
                             <button class="feedback-video-item-play"></button>
                         </div>
-                        <div class="feedback-video-item swiper-slide">
+                        <div class="feedback-video-item swiper-slide" data-url="https://www.youtube.com/embed/teojy6WjlKA">
                             <img src="img/video-bg.png" alt="">
                             <h3 class="feedback-video-item-title">«Полный релакс»</h3>
                             <button class="feedback-video-item-play"></button>
                         </div>
-                        <div class="feedback-video-item swiper-slide">
+                        <div class="feedback-video-item swiper-slide" data-url="https://www.youtube.com/embed/teojy6WjlKA">
                             <img src="img/video-bg.png" alt="">
                             <h3 class="feedback-video-item-title">«Полный релакс»</h3>
                             <button class="feedback-video-item-play"></button>
@@ -581,7 +590,7 @@
                     <div class="swiper-wrapper">
                         <div class="feedback-comments-item swiper-slide">
                             <div class="feedback-comments-item-top">
-                                <img class="feedback-comments-item-picture" src="img/logo.svg" alt="logo">
+                                <img class="feedback-comments-item-picture" src="img/logo-wht.svg" alt="logo">
                                 <div class="feedback-comments-item-author">
                                     <div class="feedback-comments-item-name">Андрей Халиков</div>
                                     <div class="stars">
@@ -600,7 +609,7 @@
                         </div>
                         <div class="feedback-comments-item swiper-slide">
                             <div class="feedback-comments-item-top">
-                                <img class="feedback-comments-item-picture"  src="img/logo.svg" alt="logo">
+                                <img class="feedback-comments-item-picture"  src="img/logo-wht.svg" alt="logo">
                                 <div class="feedback-comments-item-author">
                                     <div class="feedback-comments-item-name">Андрей Халиков</div>
                                     <div class="stars">
@@ -619,7 +628,7 @@
                         </div>
                         <div class="feedback-comments-item swiper-slide">
                             <div class="feedback-comments-item-top">
-                                <img class="feedback-comments-item-picture" src="img/logo.svg" alt="logo">
+                                <img class="feedback-comments-item-picture" src="img/logo-wht.svg" alt="logo">
                                 <div class="feedback-comments-item-author">
                                     <div class="feedback-comments-item-name">Андрей Халиков</div>
                                     <div class="stars">
@@ -638,7 +647,7 @@
                         </div>
                         <div class="feedback-comments-item swiper-slide">
                             <div class="feedback-comments-item-top">
-                                <img class="feedback-comments-item-picture" src="img/logo.svg" alt="logo">
+                                <img class="feedback-comments-item-picture" src="img/logo-wht.svg" alt="logo">
                                 <div class="feedback-comments-item-author">
                                     <div class="feedback-comments-item-name">Андрей Халиков</div>
                                     <div class="stars">
@@ -671,9 +680,9 @@
                     <form class="form" action="">
                         <div class="form-col">
                             <div class="form-row">
-                                <div class="input-item input-item__dark input-item__error">
+                                <div class="input-item input-item__dark">
                                     <div class="input-item-title">Как вас зовут?</div>
-                                    <input type="text" class="input" placeholder="Имя">
+                                    <input name="name" type="text" class="input" placeholder="Имя">
                                 </div>
                                 <div class="input-item input-item__dark">
                                     <div class="input-item-title">Номер телефона</div>
@@ -694,7 +703,7 @@
         </section>
 
         <section class="contacts">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad8b50bd96e11e6da2607e1e51554aff0bb391da37633c0e4637747d50491d2cf&amp;source=constructor" width="100%" height="605" frameborder="0"></iframe>
+            <div id="map"></div>
             <div class="contacts-wrapper">
                 <h2><span class="gold italic">Связь</span> с нами</h2>
                 <p class="contacts-text">г. Сургут, ул. Проспект Мира, 25</p>
@@ -775,7 +784,25 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <div class="popup popup-more">
+        <div class="popup-body">
+            <button class="popup-close"></button>
+            <img src="img/popup-more-img.png" alt="" class="popup-img">
+            <div class="popup-text">
+                <h3 class="popup-title">Заголовок</h3>
+                <p class="popup-desc">Описание</p>
+                <div class="popup-text-term">
+                    <div class="popup-text-time">Время</div>
+                    <div class="popup-text-price">Цена</div>
+                </div>
+                <button class="button">ДОБАВИТЬ В КОРЗИНУ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/imask.js"></script>
+    <script src="js/fslightbox.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

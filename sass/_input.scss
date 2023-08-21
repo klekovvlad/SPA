@@ -21,13 +21,22 @@
         }
 
         &::after {
-            content: 'Пожалуйста, заполните это поле';
+            content: attr(data-error);
             position: absolute;
             bottom: 0;
             left: 0;
             font-size: 14px;
             color: #D14141;
             transform: translate(0, calc(100%));
+        }
+
+        &:has(input#privacy) {
+            &::after {
+                display: none;
+            }
+            label:before {
+                border: 1px solid #D14141 !important;
+            }
         }
     }
 
@@ -88,6 +97,59 @@
             &::before {
                 background: var(--color-gold) url('../img/icons/check.svg') no-repeat center;
                 background-size: 50%;
+            }
+        }
+    }
+
+    &.input-item__dropdown {
+        position: relative;
+
+        &.open {
+            .dropdown-list {
+                opacity: 1;
+                visibility: visible;
+                transform: translate(0, 100%);
+            }
+        }
+
+        .input {
+            cursor: pointer;
+            position: relative;
+            z-index: 3;
+        }
+
+        .dropdown {
+            &-list {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                visibility: hidden;
+                transform: translate(0, calc(100% - 50px));
+                transition: opacity .3s .2s linear, transform .3s linear;
+                z-index: 2;
+            }
+
+            &-item {
+                cursor: pointer;
+                font-size: 16px;
+                background: #fff;
+                line-height: 1;
+                @include font(400);
+                padding: 21px 24px;
+                color: var(--color-text);
+                border: 1px solid var(--color-border);
+                width: 100%;
+                transition: background .3s linear;
+
+                &:not(:last-child) {
+                    border-bottom: none;
+                }
+
+                &:hover {
+                    background: var(--color-border);
+                }
             }
         }
     }

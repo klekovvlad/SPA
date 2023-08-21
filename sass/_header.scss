@@ -202,6 +202,7 @@
                 left: 0;
                 right: 0;
                 overflow-y: scroll;
+                z-index: 10;
 
                 .container {
                     max-height: 100%;

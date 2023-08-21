@@ -19,3 +19,12 @@
         }
     }
 }
+
+.social-link {
+    transition: opacity .3s linear, filter .3s linear;
+
+    &:hover {
+        opacity: .8;
+        filter: brightness(.8);
+    }
+}

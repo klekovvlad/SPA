@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPA Park</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
-
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=49618d3f-5aa6-481b-a340-d90d9762907f&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
     
@@ -15,7 +15,7 @@
             <div class="header-wrapper">
                 <div class="header-top">
                     <a href="/" class="logo">
-                        <img src="img/logo.png" alt="logo">
+                        <img src="img/logo.svg" alt="logo">
                     </a>
                     <div class="header-adress">
                         <div class="header-adress-item">
@@ -118,7 +118,7 @@
                     <span></span><span></span><span></span>
                 </button>
                 <a href="/" class="logo">
-                    <img src="img/logo.png" alt="logo">
+                    <img src="img/logo.svg" alt="logo">
                 </a>
                 <div class="header-top-contacts">
                     <a href="tel:+7346252-30-10" class="phone">+7(3462) 52-30-10</a>
@@ -228,7 +228,7 @@
                 <div class="promotions-wrapper">
                     <div class="promotion-item">
                         <div class="promotion-img">
-                            <img src="img/places/1.png" alt="">
+                            <img  loading="lazy" src="img/places/1.png" alt="">
                         </div>
                         <h3 class="promotion-title">подарочный сертификат в СПА</h3>
                         <p class="promotion-desc">В номере имеется небольшой хаммам, 2 массажных кресла, кровать, телевизор, 2 кресла, стол, встроенная гардеробная, душ с санузлом. Номер возможно снять на сутки,  со  спа прогр....</p>
@@ -236,7 +236,7 @@
                     </div>
                     <div class="promotion-item">
                         <div class="promotion-img">
-                            <img src="img/places/1.png" alt="">
+                            <img loading="lazy" src="img/places/1.png" alt="">
                         </div>
                         <h3 class="promotion-title">подарочный сертификат в СПА</h3>
                         <p class="promotion-desc">В номере имеется небольшой хаммам, 2 массажных кресла, кровать, телевизор, 2 кресла, стол, встроенная гардеробная, душ с санузлом. Номер возможно снять на сутки,  со  спа прогр....</p>
@@ -244,7 +244,7 @@
                     </div>
                     <div class="promotion-item">
                         <div class="promotion-img">
-                            <img src="img/places/1.png" alt="">
+                            <img loading="lazy" src="img/places/1.png" alt="">
                         </div>
                         <h3 class="promotion-title">подарочный сертификат в СПА</h3>
                         <p class="promotion-desc">В номере имеется небольшой хаммам, 2 массажных кресла, кровать, телевизор, 2 кресла, стол, встроенная гардеробная, душ с санузлом. Номер возможно снять на сутки,  со  спа прогр....</p>
@@ -252,7 +252,7 @@
                     </div>
                     <div class="promotion-item">
                         <div class="promotion-img">
-                            <img src="img/places/1.png" alt="">
+                            <img loading="lazy" src="img/places/1.png" alt="">
                         </div>
                         <h3 class="promotion-title">подарочный сертификат в СПА</h3>
                         <p class="promotion-desc">В номере имеется небольшой хаммам, 2 массажных кресла, кровать, телевизор, 2 кресла, стол, встроенная гардеробная, душ с санузлом. Номер возможно снять на сутки,  со  спа прогр....</p>
@@ -260,7 +260,7 @@
                     </div>
                     <div class="promotion-item">
                         <div class="promotion-img">
-                            <img src="img/places/1.png" alt="">
+                            <img loading="lazy" src="img/places/1.png" alt="">
                         </div>
                         <h3 class="promotion-title">подарочный сертификат в СПА</h3>
                         <p class="promotion-desc">В номере имеется небольшой хаммам, 2 массажных кресла, кровать, телевизор, 2 кресла, стол, встроенная гардеробная, душ с санузлом. Номер возможно снять на сутки,  со  спа прогр....</p>
@@ -268,7 +268,7 @@
                     </div>
                     <div class="promotion-item">
                         <div class="promotion-img">
-                            <img src="img/places/1.png" alt="">
+                            <img loading="lazy" src="img/places/1.png" alt="">
                         </div>
                         <h3 class="promotion-title">подарочный сертификат в СПА</h3>
                         <p class="promotion-desc">В номере имеется небольшой хаммам, 2 массажных кресла, кровать, телевизор, 2 кресла, стол, встроенная гардеробная, душ с санузлом. Номер возможно снять на сутки,  со  спа прогр....</p>
@@ -276,18 +276,18 @@
                     </div>
                 </div>
                 <div class="paginations">
-                    <button class="pagination-prev">Назад</button>
-                    <button class="pagination-page">1</button>
-                    <button class="pagination-page curent">2</button>
-                    <button class="pagination-page">3</button>
-                    <button class="pagination-next">Далее</button>
+                    <a href="" class="pagination-prev">Назад</a>
+                    <a href="" class="pagination-page">1</a>
+                    <a href="" class="pagination-page curent">2</a>
+                    <a href="" class="pagination-page">3</a>
+                    <a href="" class="pagination-next">Далее</a>
                 </div>
             </div>
         </section>
 
            
         <section class="contacts">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad8b50bd96e11e6da2607e1e51554aff0bb391da37633c0e4637747d50491d2cf&amp;source=constructor" width="100%" height="605" frameborder="0"></iframe>
+                <div id="map"></div>
                 <div class="contacts-wrapper">
                     <h2><span class="gold italic">Связь</span> с нами</h2>
                     <p class="contacts-text">г. Сургут, ул. Проспект Мира, 25</p>
@@ -367,8 +367,8 @@
             </div>
         </div>
     </footer>
-
-        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="js/imask.js"></script>
+        <script src="js/swiper.min.js"></script>
         <script src="js/app.js"></script>
     </body>
 </html>

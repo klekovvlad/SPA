@@ -175,6 +175,11 @@
                 &:last-child {
                     flex: 0 0 60%;
 
+                    @include mobile {
+                        flex: 0 0 100%;
+                        width: 100%;
+                    }
+
                     p.form-text {
                         text-align: right;
                         margin-left: auto;

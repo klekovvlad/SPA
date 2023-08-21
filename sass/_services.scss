@@ -127,6 +127,11 @@
             position: relative;
             aspect-ratio: 6 / 7;
 
+            @include mobile {
+                height: 310px;
+                width: 100%;
+            }
+
             &::before {
                 content: '';
                 position: absolute;
@@ -166,6 +171,10 @@
             line-height: 1;
             height: 44px;
             overflow: hidden;
+        }
+
+        &-desc {
+            display: none;
         }
 
         &-info {

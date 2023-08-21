@@ -159,3 +159,35 @@
     background-size: contain;
     flex: 0 0 30px;
 }
+
+.slider-photo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: transparent url('../img/icons/photo-slider.svg') no-repeat center;
+    background-size: 50%;
+    border: 1px solid #fff;
+    cursor: pointer;
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    transition: background .3s linear;
+
+    @include tablet {
+        display: none;
+    }
+
+    &:hover {
+        background: var(--color-border) url('../img/icons/photo-slider.svg') no-repeat center;
+    }
+
+    &-prev {
+        left: 30px;
+        transform: translate(0, -50%);
+    }
+
+    &-next {
+        right: 30px;
+        transform: translate(0, -50%) rotate(180deg);
+    }
+}

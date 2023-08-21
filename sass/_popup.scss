@@ -46,6 +46,49 @@
         }
     }
 
+    &.popup-message {
+        align-items: center;
+
+        .popup-body {
+            text-align: center;
+        }
+
+        .popup-title {
+            font-size: 60px;
+            margin: 0px 0px 10px;
+
+            @include mobile {
+                font-size: 28px;
+            }
+        }
+
+        .popup-desc {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+    }
+
+    &.popup-video {
+        align-items: center;
+
+        .popup-body {
+            padding: 0;
+            width: min(850px, calc(100% - 30px));
+
+
+            iframe {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .popup-close {
+            filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(200deg) brightness(101%) contrast(100%);
+        }
+    }
+
     &.popup-more {
         align-items: center;
 
