@@ -115,7 +115,6 @@
         .input {
             cursor: pointer;
             position: relative;
-            z-index: 3;
         }
 
         .dropdown {
@@ -128,7 +127,7 @@
                 visibility: hidden;
                 transform: translate(0, calc(100% - 50px));
                 transition: opacity .3s .2s linear, transform .3s linear;
-                z-index: 2;
+                z-index: 5;
             }
 
             &-item {

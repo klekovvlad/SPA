@@ -227,7 +227,7 @@
                 <h1 class="hero-title">ИНДИЯ</h1>
                 <p class="hero-subtitle">Уникальная особенность этого номера - возможность посетить самый настоящий хамам с удивительным по своим ощущениям мыльным массажем...</p>
                 <div class="hero-buttons">
-                    <a href="/" class="button">ЗАПИСАТЬСЯ</a>
+                    <button class="button popup-register-button">ЗАПИСАТЬСЯ</button>
                     <a class="hero-social" href="#"><img src="img/icons/wa-color.svg" alt=""></a>
                 </div>
             </div>
@@ -279,7 +279,7 @@
                     <ul class="prices-list">
                         <h3>Программы Спа пространства «Индия»</h3>
                         <li class="prices-list-item">
-                            <input type="radio" id="programs-1" name="programs">
+                            <input type="radio" id="programs-1" name="programs" checked>
                             <label for="programs-1" class="prices-item">
                                 <div class="prices-item-text">
                                     <div class="prices-item-title">Прогрев в хаммам / массаж / чайная церемония</div>
@@ -288,11 +288,11 @@
                                 <div class="prices-item-text">
                                     <div class="prices-item-info">
                                         Время
-                                        <span class="value">160 мин.</span>
+                                        <span class="value time-value">160 мин.</span>
                                     </div>
                                     <div class="prices-item-info">
                                         1 гость
-                                        <span class="value">4 500 ₽</span>
+                                        <span class="value summ-value">4 500 ₽</span>
                                     </div>
                                     <div class="prices-item-info">
                                         2 гостя
@@ -311,11 +311,11 @@
                                 <div class="prices-item-text">
                                     <div class="prices-item-info">
                                         Время
-                                        <span class="value">160 мин.</span>
+                                        <span class="value time-value">160 мин.</span>
                                     </div>
                                     <div class="prices-item-info">
                                         1 гость
-                                        <span class="value">4 500 ₽</span>
+                                        <span class="value summ-value">4 500 ₽</span>
                                     </div>
                                     <div class="prices-item-info">
                                         2 гостя
@@ -334,11 +334,11 @@
                                 <div class="prices-item-text">
                                     <div class="prices-item-info">
                                         Время
-                                        <span class="value">160 мин.</span>
+                                        <span class="value time-value">160 мин.</span>
                                     </div>
                                     <div class="prices-item-info">
                                         1 гость
-                                        <span class="value">4 500 ₽</span>
+                                        <span class="value summ-value">4 500 ₽</span>
                                     </div>
                                     <div class="prices-item-info">
                                         2 гостя
@@ -357,11 +357,11 @@
                                 <div class="prices-item-text">
                                     <div class="prices-item-info">
                                         Время
-                                        <span class="value">160 мин.</span>
+                                        <span class="value time-value">160 мин.</span>
                                     </div>
                                     <div class="prices-item-info">
                                         1 гость
-                                        <span class="value">4 500 ₽</span>
+                                        <span class="value summ-value">4 500 ₽</span>
                                     </div>
                                     <div class="prices-item-info">
                                         2 гостя
@@ -374,8 +374,8 @@
                     <ul class="prices-list">
                         <h3>Аренда </h3>
                         <li class="prices-list-item">
-                            <input type="radio" id="rent-1" name="rent">
-                            <label for="rent-1" class="prices-item">
+                            <input type="radio" id="programs-5" name="programs">
+                            <label for="programs-5" class="prices-item">
                                 <div class="prices-item-text">
                                     <div class="prices-item-title">Аренда номера (1-2 человека) с хамама</div>
                                     <div class="prices-item-desc">Дополнительный час 1500 ₽</div>
@@ -383,18 +383,18 @@
                                 <div class="prices-item-text">
                                     <div class="prices-item-info">
                                         Время
-                                        <span class="value">5 часов</span>
+                                        <span class="value time-value">5 часов</span>
                                     </div>
                                     <div class="prices-item-info">
                                         1 - 2 гостя
-                                        <span class="value">15 000 ₽</span>
+                                        <span class="value summ-value">15 000 ₽</span>
                                     </div>
                                 </div>
                             </label>
                         </li>
                         <li class="prices-list-item">
-                            <input type="radio" id="rent-2" name="rent">
-                            <label for="rent-2" class="prices-item">
+                            <input type="radio" id="programs-6" name="programs">
+                            <label for="programs-6" class="prices-item">
                                 <div class="prices-item-text">
                                     <div class="prices-item-title">Аренда номера (1-2 человека) с хамама</div>
                                     <div class="prices-item-desc">Дополнительный час 1500 ₽</div>
@@ -402,11 +402,11 @@
                                 <div class="prices-item-text">
                                     <div class="prices-item-info">
                                         Время
-                                        <span class="value">5 часов</span>
+                                        <span class="value time-value">5 часов</span>
                                     </div>
                                     <div class="prices-item-info">
                                         1 - 2 гостя
-                                        <span class="value">15 000 ₽</span>
+                                        <span class="value summ-value">15 000 ₽</span>
                                     </div>
                                 </div>
                             </label>
@@ -423,21 +423,21 @@
                                 <div class="form-row">
                                     <div class="input-item input-item__dark input-item__quantity">
                                         <div class="input-item-title">Количество гостей</div>
-                                        <input type="text" value="2" class="input">
+                                        <input type="text" value="1" class="input">
                                         <button class="input-button" data-action="minus"></button>
                                         <button class="input-button" data-action="plus"></button>
                                     </div>
                                     <div class="input-item input-item__dark">
                                         <div class="input-item-title">Длительность</div>
-                                        <div class="input-info input">160 мин</div>
+                                        <div class="input-info input time-value">160 мин</div>
                                     </div>
                                     <div class="input-item input-item__dark">
                                         <div class="input-item-title">Цена</div>
-                                        <div class="input-info input">7 000 ₽</div>
+                                        <div class="input-info input summ-value">7 000 ₽</div>
                                     </div>
                                     <div class="input-item input-item__dark input-item__quantity">
                                         <div class="input-item-title">Количество услуг</div>
-                                        <input type="text" value="2" class="input">
+                                        <input type="text" value="1" class="input input-quantity">
                                         <button class="input-button" data-action="minus"></button>
                                         <button class="input-button" data-action="plus"></button>
                                     </div>
@@ -631,6 +631,34 @@
             </div>
         </div>
     </footer>
+
+    <div class="popup popup-register">
+        <div class="popup-body">
+            <button class="popup-close"></button>
+            <h3 class="popup-title">Записаться</h3>
+            <div class="popup-subtitle">Оставьте контактые данные, наш менеджер перезвонит вам</div>
+            <form action="" class="form">
+                <div class="form-col">
+                    <div class="form-row">
+                        <div class="input-item">
+                            <div class="input-item-title">Ваше имя</div>
+                            <input type="text" class="input" name="name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-item">
+                            <div class="input-item-title">Номер телефона</div>
+                            <input type="tel" class="input">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="button">Отправить</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
         <script src="js/imask.js"></script>
         <script src="js/fslightbox.js"></script>
         <script src="js/swiper.min.js"></script>

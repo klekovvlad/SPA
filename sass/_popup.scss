@@ -89,6 +89,24 @@
         }
     }
 
+    &.popup-register {
+
+        align-items: center;
+        
+        .popup-body {
+            width: min(500px, calc(100% - 30px));
+
+            .form-col {
+                flex: 0 0 100%;
+            }
+
+            .popup-subtitle {
+                margin: 0px 0px 30px;
+            }
+        };
+
+    }
+
     &.popup-more {
         align-items: center;
 

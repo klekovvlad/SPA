@@ -221,7 +221,7 @@
                 <p class="hero-subtitle">Spa Park – это не просто спа-салон. Это скорее идея, ритуал, атмосфера. В нашем Доме каждый номер имеет свое особенное имя. Поэтому гости Spa Park не просто получают желаемый уход, а путешествуют.</p>
                 <div class="hero-buttons">
                     <a href="/" class="button-border">СПА программы</a>
-                    <button class="button">Забронировать онлайн</button>
+                    <button class="button popup-register-button">Забронировать онлайн</button>
                 </div>
             </div>
         </section>
@@ -458,7 +458,7 @@
                             </div>
                             <h3 class="gifts-title">Сертификат в СПА</h3>
                             <div class="gifts-price"><span class="value">3 000</span> ₽</div>
-                            <a href="#" class="button-border">Купить</a>
+                            <button class="button-border popup-cert-button">Купить</button>
                         </div>
                         <div class="gifts-slide swiper-slide">
                             <div class="gifts-slide-img">
@@ -466,7 +466,7 @@
                             </div>
                             <h3 class="gifts-title">Сертификат в СПА</h3>
                             <div class="gifts-price"><span class="value">3 000</span> ₽</div>
-                            <a href="#" class="button-border">Купить</a>
+                            <button class="button-border popup-cert-button">Купить</button>
                         </div>
                         <div class="gifts-slide swiper-slide">
                             <div class="gifts-slide-img">
@@ -474,7 +474,7 @@
                             </div>
                             <h3 class="gifts-title">Сертификат в СПА</h3>
                             <div class="gifts-price"><span class="value">3 000</span> ₽</div>
-                            <a href="#" class="button-border">Купить</a>
+                            <button class="button-border popup-cert-button">Купить</button>
                         </div>
                     </div>
                 </div>
@@ -800,6 +800,114 @@
         </div>
     </div>
 
+    <div class="popup popup-register">
+        <div class="popup-body">
+            <button class="popup-close"></button>
+            <h3 class="popup-title">Обратный звонок</h3>
+            <div class="popup-subtitle">Оставьте контактые данные, наш менеджер перезвонит вам</div>
+            <form action="" class="form">
+                <div class="form-col">
+                    <div class="form-row">
+                        <div class="input-item">
+                            <div class="input-item-title">Ваше имя</div>
+                            <input type="text" class="input" name="name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-item">
+                            <div class="input-item-title">Номер телефона</div>
+                            <input type="tel" class="input">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="button">Отправить</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+            <!-- За скрытие и отображение поп-ап отвечает класс .open -->
+            <div class="popup popup-cert">
+                <div class="popup-body">
+                    <button class="popup-close"></button>
+                    <form action="" class="form form-popup">
+                        <div class="form-col">
+                            <div class="form-row">
+                                <h3 class="popup-title">ПОДАРОЧНЫЙ СЕРТИФИКАТ</h3>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-item input-item__buttons">
+                                    <input type="radio" name="summ" id="summ-1" value="3000" checked>
+                                    <label for="summ-1" class="input">3 000 ₽</label>
+                                    <input type="radio" name="summ" id="summ-2" value="5000">
+                                    <label for="summ-2" class="input">5 000 ₽</label>
+                                    <input type="radio" name="summ" id="summ-3" value="10000">
+                                    <label for="summ-3" class="input">10 000 ₽</label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-item">
+                                    <div class="input-item-title">На другую сумму</div>
+                                    <input type="text" class="input" placeholder="Введите сумму">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-item">
+                                    <input name="name" type="text" class="input" placeholder="Имя фамилия">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-item">
+                                    <input type="tel" class="input" placeholder="Телефон  *">
+                                </div>
+                                <div class="input-item">
+                                    <input type="email" class="input" placeholder="Email  *">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-item">
+                                    <div class="input-item-title">Получатель</div>
+                                    <input type="text" class="input" placeholder="Имя и фамилия получателя *">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-item input-item__list">
+                                    <input type="radio" name="list" id="list-1" value="Самовывоз" checked>
+                                    <label for="list-1">Самовывоз</label>
+                                    <input type="radio" name="list" id="list-2" value="Доставка в пределах города (+ 500 р.)">
+                                    <label for="list-2">Доставка в пределах города (+ 500 р.)</label>
+                                    <input type="radio" name="list" id="list-3" value="Доставка в Белый Яр, Барсово, Солнечный (+ 700 р.)">
+                                    <label for="list-3">Доставка в Белый Яр, Барсово, Солнечный (+ 700 р.)</label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button class="button">ОПЛАТИТЬ</button>
+                            </div>
+                            <div class="form-row">
+                                <p class="form-popup-desc">В случае возникновения вопросов по поводу предоплаты, просим Вас уточнять у менеджера:</p>
+                            </div>
+                            <div class="form-row">
+                                <a href="tel:+7 (3462) 52-30-10" class="phone">+7 (3462) 52-30-10</a>
+                            </div>
+                            <div class="form-row">
+                                <div class="social-links">
+                                    <a href="" class="social-link">
+                                        <img src="img/icons/tg-color.svg" alt="">
+                                    </a>
+                                    <a href="" class="social-link">
+                                        <img src="img/icons/wa-color.svg" alt="">
+                                    </a>
+                                    <a href="" class="social-link">
+                                        <img src="img/icons/viber.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
     <script src="js/imask.js"></script>
     <script src="js/fslightbox.js"></script>
     <script src="js/swiper.min.js"></script>

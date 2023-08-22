@@ -320,48 +320,51 @@ if(forms.length > 0) {
             const phone = form.querySelector('input[type=tel]');
             const privacy = form.querySelector('input#privacy');
             const email = form.querySelector('input[type=email]');
-            let valid = true;
 
             if(name) {
                 if(name.value.length < 2) {
                     addInputError(name, errors.fill)
-                    valid = false;
+                    
                 }else if(name.value.length > 30) {
                     addInputError(name, errors.novalid)
-                    valid = false;
-                }else {
-                    valid = true;
                 }
                 removeInputError(name);
             }
             if(phone) {
                 if(phone.value.length < 16) {
                     addInputError(phone, errors.fill)
-                    valid = false
-                }else{
-                    valid = true
                 }
                 removeInputError(phone)
             }
             if(privacy) {
                 if(!privacy.checked) {
                     addInputError(privacy, errors.fill)
-                    valid = false
-                }else valid = true;
+                }
                 removeInputError(privacy)
             }
             if(email) {
                 if(!regs.email.test(email.value)) {
                     addInputError(email, errors.novalid)
-                    valid = false;
-                }else {
-                    valid = true
                 }
                 removeInputError(email);
             }
 
-            if(valid) {
-                sendForm(form);
+            if(phone.value.length >= 16 && name.value.length >= 2) {
+                if(privacy && email) {
+                    if(privacy.checked && regs.email.test(email.value)) {
+                        sendForm(form)
+                    }
+                }else if(privacy) {
+                    if(privacy.checked) {
+                        sendForm(form)
+                    }
+                }else if(email) {
+                    if(regs.email.test(email.value)) {
+                        sendForm(form)
+                    }
+                }else {
+                    sendForm(form)
+                }
             }
         })
     })
@@ -449,6 +452,20 @@ if(videoFeedbacks.length > 0) {
     })
 }
 
+//Поп-ап записаться
+const registerButtons = document.querySelectorAll('.popup-register-button')
+if(registerButtons.length > 0) {
+    const popup = document.querySelector('.popup-register')
+    if(popup) {
+        registerButtons.forEach(button => {
+            button.onclick = () => {
+                popup.classList.add('open')
+                popupClose(popup)
+            }
+        })
+    }
+}
+
 //Поп-ап сервиса
 
 const serviceItems = document.querySelectorAll('.services-item');
@@ -459,7 +476,7 @@ serviceItems.forEach(service => {
         if(e.target.classList.contains('button-card')) {
             e.preventDefault();
             servicePopup.querySelector('.popup-title').textContent = service.querySelector('.services-item-title').textContent
-            servicePopup.querySelector('.popup-desc').textContent = service.querySelector('.services-item-desc').textContent
+            servicePopup.querySelector('.popup-desc').textContent = service.querySelector('.services-item-desc') ? service.querySelector('.services-item-desc').textContent : ''
             servicePopup.querySelector('.popup-img').src = service.querySelector('.services-item-img > img').src
             servicePopup.querySelector('.popup-text-time').innerHTML = service.querySelector('.services-item-time').innerHTML
             servicePopup.querySelector('.popup-text-price').innerHTML = service.querySelector('.services-item-price').innerHTML
@@ -494,6 +511,17 @@ if(dropdownInputs.length > 0) {
     })
 }
 
+const certButtons = document.querySelectorAll('.popup-cert-button');
+if(certButtons.length > 0) {
+    const popupCert = document.querySelector('.popup-cert')
+    certButtons.forEach(button => {
+        button.onclick = (e) => {
+            popupCert.classList.add('open')
+            popupClose(popupCert);
+        }
+    })
+}
+
 if(formCert) {
     const popupCert = document.querySelector('.popup-cert')
     const popupSumm = formCert.querySelector('input.input')
@@ -515,4 +543,36 @@ if(formCert) {
         }
 
     }
+}
+
+//Цены и услуги
+
+const pricesWrapper = document.querySelector('.prices-wrapper');
+if(pricesWrapper) {
+    const items = document.querySelectorAll('.prices-list-item')
+    const cartForm = document.querySelector('.addcart');
+    
+    if(items.length > 0) {
+        cartForm.querySelector('.addcart-title').textContent = items[0].querySelector('.prices-item-title').textContent;
+        cartForm.querySelector('.addcart-desc').textContent = items[0].querySelector('.prices-item-desc').textContent;
+        cartForm.querySelector('.time-value').textContent = items[0].querySelector('.time-value').textContent;
+        cartForm.querySelector('.summ-value').textContent = items[0].querySelector('.summ-value').textContent;
+        cartForm.querySelector('.addcart-summary-price > .value').textContent = `${Number(items[0].querySelector('.summ-value').textContent.replace('₽', '').replace(' ', '')) * Number(cartForm.querySelector('.input-quantity').value)} ₽`
+
+        items.forEach(item => {
+            
+            item.onclick = () => {
+                cartForm.querySelector('.addcart-title').textContent = item.querySelector('.prices-item-title').textContent;
+                cartForm.querySelector('.addcart-desc').textContent = item.querySelector('.prices-item-desc').textContent;
+                cartForm.querySelector('.time-value').textContent = item.querySelector('.time-value').textContent;
+                cartForm.querySelector('.summ-value').textContent = item.querySelector('.summ-value').textContent;
+                cartForm.querySelector('.addcart-summary-price > .value').textContent = `${Number(item.querySelector('.summ-value').textContent.replace('₽', '').replace(' ', '')) * Number(cartForm.querySelector('.input-quantity').value)} ₽`
+            } 
+        })
+
+        cartForm.querySelector('.input-quantity').parentElement.addEventListener('click', (e) => {
+            cartForm.querySelector('.addcart-summary-price > .value').textContent = `${Number(cartForm.querySelector('.summ-value').textContent.replace('₽', '').replace(' ', '')) * Number(cartForm.querySelector('.input-quantity').value)} ₽`
+        })
+    }
+
 }
